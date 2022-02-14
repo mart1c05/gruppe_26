@@ -1,0 +1,32 @@
+
+/* ---------- Nulstil af mellemrum og Størrelser ---------- */
+
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+img {
+  width: 100%;
+}
+
+
+/* ---------- Global Variabler til Farver, Fonts og Fonts Størrelser ---------- */
+/* Variablen bliver brugt så ledes:  background-color: var(--primereFarve) */
+/* understående er eksempler på Variabler */
+:root {
+
+    /* Farver */
+--primereFarve: blue;
+
+    /* Fonts */
+--overskrift: sans-serif;
+
+
+    /* Fonts Størrelser */
+--h1: clamp(2rem 5vw 4.5rem)
+
+
+
+
+}
