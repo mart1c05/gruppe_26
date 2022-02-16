@@ -19,6 +19,9 @@ img {
 
 :root {
   /* ---------- Farver ---------- */
+  /* Grundfarver */
+  --sort: black;
+  --hvid: white;
 
   /* Color palette  */
   --pink: #ffbbf9;
