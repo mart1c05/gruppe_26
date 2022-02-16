@@ -16,21 +16,32 @@ img {
 /* ---------- Global Variabler til Farver, Fonts og Fonts Størrelser ---------- */
 /* Variablen bliver brugt så ledes:  background-color: var(--primereFarve) */
 /* understående er eksempler på Variabler */
-:root {
-  /* Farver */
-  --primereFarve: blue;
 
-  /* Fonts */
+:root {
+  /* ---------- Farver ---------- */
+
+  /* Color palette  */
+  --pink: #ffbbf9;
+  --grøn: #04d98b;
+  --blå: #85d3fd;
+  --gul: #fddd64;
+  --orange: #fc6225;
+
+  /* ---------- Fonts ---------- */
   --overskrift: hegante, sans-serif;
   --overskrift-weight: 900;
   --overskrift-style: normal;
-
   --brødtekst: "M PLUS Rounded 1c", sans-serif;
-
   --uiElementer: terfens, sans-serif;
   --uiElementer-weight: 400;
   --uiElementer-style: normal;
 
   /* Fonts Størrelser */
   --h1: clamp(2rem 5vw 4.5rem);
+  --h2: clamp(2rem 5vw 4.5rem);
+  --h3: clamp(2rem 5vw 4.5rem);
+  --h4: clamp(2rem 5vw 4.5rem);
+  --h5: clamp(2rem 5vw 4.5rem);
+  --p: clamp(2rem 5vw 4.5rem);
+  --uiElementer: clamp(2rem 5vw 4.5rem);
 }
