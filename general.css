@@ -22,6 +22,7 @@ img {
   /* Grundfarver */
   --sort: black;
   --hvid: white;
+  --grå: #707070;
 
   /* Color palette  */
   --pink: #ffbbf9;
@@ -40,11 +41,11 @@ img {
   --uiElementer-style: normal;
 
   /* Fonts Størrelser */
-  --h1: clamp(2rem, 5vw, 4.5rem);
-  --h2: clamp(2rem, 5vw, 4.5rem);
-  --h3: clamp(2rem, 5vw, 4.5rem);
-  --h4: clamp(2rem, 5vw, 4.5rem);
-  --h5: clamp(2rem, 5vw, 4.5rem);
-  --p: clamp(2rem, 5vw, 4.5rem);
+  --h1: clamp(2rem, 5vw, 4rem);
+  --h2: clamp(2rem, 5vw, 3.5rem);
+  --h3: clamp(2rem, 5vw, 3rem);
+  --h4: clamp(2rem, 5vw, 2.5rem);
+  --h5: clamp(2rem, 5vw, 2rem);
+  --p: clamp(2rem, 5vw, 1.5rem);
   --uisize: clamp(2rem 5vw 4.5rem);
 }
