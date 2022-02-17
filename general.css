@@ -40,11 +40,11 @@ img {
   --uiElementer-style: normal;
 
   /* Fonts Størrelser */
-  --h1: clamp(2rem 5vw 4.5rem);
-  --h2: clamp(2rem 5vw 4.5rem);
-  --h3: clamp(2rem 5vw 4.5rem);
-  --h4: clamp(2rem 5vw 4.5rem);
-  --h5: clamp(2rem 5vw 4.5rem);
-  --p: clamp(2rem 5vw 4.5rem);
-  --uiElementer: clamp(2rem 5vw 4.5rem);
+  --h1: clamp(2rem, 5vw, 4.5rem);
+  --h2: clamp(2rem, 5vw, 4.5rem);
+  --h3: clamp(2rem, 5vw, 4.5rem);
+  --h4: clamp(2rem, 5vw, 4.5rem);
+  --h5: clamp(2rem, 5vw, 4.5rem);
+  --p: clamp(2rem, 5vw, 4.5rem);
+  --uisize: clamp(2rem 5vw 4.5rem);
 }
