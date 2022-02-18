@@ -1,7 +1,7 @@
 const header = document.querySelector("header h2");
-      const url = "https://babushka-dd8a.restdb.io/rest/menu";
+      const url = "https://bomuldsboern-26e2.restdb.io/rest/produkter";
       const options = {
-        headers: { "x-apikey": "600ec2fb1346a1524ff12de4" },
+        headers: { "x-apikey": "620f5c4634fd62156585879d" },
       };
       document.addEventListener("DOMContentLoaded", start);
       let retter;
