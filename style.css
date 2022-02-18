@@ -51,6 +51,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
   justify-content: center;
+  align-items: start;
   gap: 20%;
 }
 #tshirtogjeans img {
