@@ -14,6 +14,7 @@ header {
   display: flex;
   height: 50px;
   gap: 50px;
+  align-items: center;
 }
 
 .icons img {
@@ -47,9 +48,6 @@ header {
 }
 /* ---------- header mobil ---------- */
 @media (max-width: 600px) {
-  .logooverskift h1 {
-    font-size: 1.5rem;
-  }
   .logo {
     height: 30px;
   }
@@ -102,9 +100,9 @@ header {
 #tshirtogjeans {
   padding: 2%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 600px));
+  grid-template-columns: repeat(auto-fit, minmax(200px, 300px));
   justify-content: center;
-  gap: 50px;
+  gap: 20%;
 }
 #tshirtogjeans img {
   border-radius: 30px;
@@ -155,8 +153,8 @@ img {
 /* ---------- Footer ---------- */
 
 footer {
-  width: 100%;
-  height: auto;
+  /* width: 100%;
+  height: auto; */
   background-color: var(--blå);
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 300px));
