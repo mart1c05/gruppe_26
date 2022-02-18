@@ -74,3 +74,8 @@ const header = document.querySelector("header h2");
     //       .querySelector("#luk")
     //       .addEventListener("click", () => (popup.style.display = "none"));
       }
+
+      //tilføj checkmark//
+      function checkMark() {
+
+      }
