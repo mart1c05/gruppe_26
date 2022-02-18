@@ -3,23 +3,29 @@ const header = document.querySelector("header h2");
       const options = {
         headers: { "x-apikey": "620f5c4634fd62156585879d" },
       };
+
+      const foldbnt = document.querySelector(".foldout");
+      const filterKnapper = document.querySelectorAll("nav button");
+    
+
+
       document.addEventListener("DOMContentLoaded", start);
       let produkter;
       let filter = "alle";
       function start() {
-        const filterKnapper = document.querySelectorAll("nav button");
+        
         filterKnapper.forEach((knap) =>
           knap.addEventListener("click", filtrerTøj)
         );
         //loadJSON();
       }
       function filtrerTøj() {
-        console.log("knap");
         filter = this.dataset.kategori;
         document.querySelector(".valgt").classList.remove("valgt");
         this.classList.add("valgt");
+        console.log(filter);
         vis(produkter);
-        header.textContent = this.textContent;
+        /* header.textContent = this.textContent; */
       }
 
       async function hentData() {
@@ -45,14 +51,12 @@ const header = document.querySelector("header h2");
           if (filter == item.kategori || filter == "alle") {
             const klon = tøjTemplate.cloneNode(true).content;
             klon.querySelector("h3").textContent = item.navn;
-            klon.querySelector("img").src =
-               item.billede1;
-            
+            klon.querySelector("img").src = item.billede1;
+
             klon.querySelector("p").textContent =
-               item.pris1 + "kr. " + item.pris2 + "kr.";
-            klon
-              .querySelector("article")
-            //   .addEventListener("click", () => visDetaljer(item));
+              item.pris1 + "kr. " + item.pris2 + "kr.";
+            klon.querySelector("article")
+            .addEventListener("click", () => visDetaljer(item));
             data.appendChild(klon);
           }
         });
@@ -73,4 +77,10 @@ const header = document.querySelector("header h2");
     //     document
     //       .querySelector("#luk")
     //       .addEventListener("click", () => (popup.style.display = "none"));
+      }
+
+      function foldOut(){
+        console.log("hi")
+        foldbnt.classList.toggle("none")
+
       }
