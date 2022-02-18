@@ -5,6 +5,16 @@
   background-size: cover;
   background-position: 50%;
   height: 80vh;
+  display: grid;
+  justify-items: center;
+  justify-content: center;
+   align-items: center;
+    overflow: hidden;
+}
+
+.gif{
+  width: 70vh;
+
 }
 
 /* ---------- KOLLEKTION ---------- */
