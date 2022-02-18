@@ -1,10 +1,20 @@
 /* ---------- SPLASHIMAGE ---------- */
 
 #splashimage {
-  background-image: url(billeder/Screenshot\ 2022-02-17\ at\ 12.16.23.png);
+  background-image: url(billeder/baggrund-01.svg);
   background-size: cover;
   background-position: 50%;
   height: 80vh;
+  display: grid;
+  justify-items: center;
+  justify-content: center;
+   align-items: center;
+    overflow: hidden;
+}
+
+.gif{
+  width: 70vh;
+
 }
 
 /* ---------- KOLLEKTION ---------- */

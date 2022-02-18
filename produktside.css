@@ -1,59 +1,76 @@
-
-.data_products{
-    margin-top: 50px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 400px));
-    justify-content: center;
-    gap: 5%;
+.data_products {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 400px));
+  justify-content: center;
+  gap: 5%;
 }
 
-.products{
-    border: var(--gul) 10px solid;
-    border-radius: 20px;
+.products {
+  border: var(--gul) 10px solid;
+  border-radius: 20px;
 }
-.products img{
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-} 
+.products img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
 
-.products div{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+.products div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 50px;
+}
+
+.foldout {
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  height: 0px;
+  transition: 0.5s;
+  opacity: 1;
+  overflow: hidden;
+  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset,
+    rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+  gap: 5%;
+  row-gap: 10px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 2%;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.foldout button {
+  border: none;
+  background-color: var(--gul);
+  border-radius: 15px;
+  width: 100px;
+  height: 25px;
+  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
+}
+
+.none {
+  height: 100px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 2%;
+  /* opacity: 0; */
+}
+
+.unisexh1{
+    font-family: var(--overskrift);
+    font-size: var(--h2);
+    margin-left: 2%;
+}
+
+.sorterKnap{
+    width: 150px;
     height: 50px;
-}
-
-.foldout{
-    display:flex;
-    background-color: rgb(255, 255, 255);
-    height: 0px;
-    transition: 0.5s;
-    opacity: 1;
-    overflow: hidden;
-    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
-    gap: 5%;
-    row-gap: 10px;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    padding-left: 2%;
-    align-items: center;
-    flex-wrap: wrap;
-
-}
-
-.foldout button{
-    border: none;
-    background-color: var(--gul);
+    background-color: var(--orange);
+    color: var(--hvid);
+    border:none;
     border-radius: 15px;
-    width: 100px;
-    height: 25px; 
-    box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
-}
-
-.none{
-    height: 100px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 2%;
-    /* opacity: 0; */
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left: 2%;
 }
