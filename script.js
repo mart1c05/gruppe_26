@@ -4,21 +4,21 @@ const header = document.querySelector("header h2");
         headers: { "x-apikey": "620f5c4634fd62156585879d" },
       };
       document.addEventListener("DOMContentLoaded", start);
-      let retter;
+      let produkter;
       let filter = "alle";
       function start() {
         const filterKnapper = document.querySelectorAll("nav button");
         filterKnapper.forEach((knap) =>
-          knap.addEventListener("click", filtrerRetter)
+          knap.addEventListener("click", filtrerTøj)
         );
         //loadJSON();
       }
-      function filtrerRetter() {
+      function filtrerTøj() {
         console.log("knap");
         filter = this.dataset.kategori;
         document.querySelector(".valgt").classList.remove("valgt");
         this.classList.add("valgt");
-        vis(retter);
+        vis(produkter);
         header.textContent = this.textContent;
       }
 
@@ -26,9 +26,9 @@ const header = document.querySelector("header h2");
         console.log("hentdata");
         const resultat = await fetch(url, options);
 
-        retter = await resultat.json();
-        console.log("Retter", retter);
-        vis(retter);
+        produkter = await resultat.json();
+        console.log("Produkter", produkter);
+        vis(produkter);
       }
       hentData();
 
@@ -36,42 +36,41 @@ const header = document.querySelector("header h2");
         console.log(json);
       }
 
-      function vis(retter) {
-        const data = document.querySelector(".data_menu");
-        const menuTemplate = document.querySelector("template");
+      function vis(produkter) {
+        const data = document.querySelector(".data_products");
+        const tøjTemplate = document.querySelector("template");
         data.textContent = "";
-        retter.forEach((ret) => {
-          console.log("Kategori", ret.kategori);
-          if (filter == ret.kategori || filter == "alle") {
-            const klon = menuTemplate.cloneNode(true).content;
-            klon.querySelector("h3").textContent = ret.navn;
+        produkter.forEach((item) => {
+          console.log("Kategori", item.kategori);
+          if (filter == item.kategori || filter == "alle") {
+            const klon = tøjTemplate.cloneNode(true).content;
+            klon.querySelector("h3").textContent = item.navn;
             klon.querySelector("img").src =
-              "medium/" + ret.billednavn + "-md.jpg";
-            klon.querySelector(".beskrivelse").textContent =
-              ret.kortbeskrivelse;
-            klon.querySelector(".pris").textContent =
-              "Pris: " + ret.pris + ",-";
+               item.billede1;
+            
+            klon.querySelector("p").textContent =
+               item.pris1 + "kr. " + item.pris2 + "kr.";
             klon
               .querySelector("article")
-              .addEventListener("click", () => visDetaljer(ret));
+            //   .addEventListener("click", () => visDetaljer(item));
             data.appendChild(klon);
           }
         });
 
-        function visDetaljer(ret) {
-          console.log(ret);
-          popup.style.display = "block";
-          popup.querySelector("h2").textContent = ret.navn;
-          popup.querySelector("img").src =
-            "medium/" + ret.billednavn + "-md.jpg";
-          popup.querySelector(".popup_beskrivelse").textContent =
-            ret.langbeskrivelse;
-          popup.querySelector(".popup_pris").textContent =
-            "Pris: " + ret.pris + ",-";
-          popup.querySelector(".popup_region").textContent =
-            ret.oprindelsesregion;
-        }
-        document
-          .querySelector("#luk")
-          .addEventListener("click", () => (popup.style.display = "none"));
+        // function visDetaljer(item) {
+        //   console.log(ret);
+        //   popup.style.display = "block";
+        //   popup.querySelector("h2").textContent = ret.navn;
+        //   popup.querySelector("img").src =
+        //     "medium/" + ret.billednavn + "-md.jpg";
+        //   popup.querySelector(".popup_beskrivelse").textContent =
+        //     ret.langbeskrivelse;
+        //   popup.querySelector(".popup_pris").textContent =
+        //     "Pris: " + ret.pris + ",-";
+        //   popup.querySelector(".popup_region").textContent =
+        //     ret.oprindelsesregion;
+    //     // }
+    //     document
+    //       .querySelector("#luk")
+    //       .addEventListener("click", () => (popup.style.display = "none"));
       }
