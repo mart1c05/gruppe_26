@@ -1,0 +1,78 @@
+h2 {
+  font-family: var(--overskrift);
+  font-size: var(--h2);
+  text-align: center;
+  margin: 20px;
+  color: var(--grå);
+}
+p {
+  font-family: var(--brødtekst);
+  font-size: var(--p);
+  color: var(--grå);
+  opacity: 80%;
+  margin: 30px;
+  font-style: italic;
+}
+.login-felt {
+  background-color: #fddc647a;
+  padding: 30px;
+  margin: 20px;
+  border-radius: 20px;
+}
+form {
+  font-family: var(--uiElementer);
+  font-size: var(--uisize);
+  color: var(--grå);
+  opacity: 80%;
+}
+.form-felt_1,
+.form-felt_2,
+.form-felt_3 {
+  border: 2px solid white;
+  border-radius: 10px;
+  margin: 2%;
+  padding: 2%;
+}
+input {
+  border: none;
+  background: none;
+}
+input:focus {
+  outline: none;
+}
+label {
+  padding-right: 5px;
+  border-right: 2px solid white;
+}
+
+button {
+  font-family: var(--uiElementer);
+  font-size: var(--uisize);
+  background-color: #ffd32c;
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  color: white;
+  font-weight: bold;
+  margin-top: 10px;
+  width: 100px;
+}
+
+.knap {
+  display: flex;
+  justify-content: end;
+  width: 100%;
+}
+@media (min-width: 600px) {
+  p {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+  .login-felt {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+  .knap {
+    justify-content: center;
+  }
+}

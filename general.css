@@ -42,11 +42,11 @@ img {
 
   /* Fonts Størrelser */
   --h1: clamp(1.5rem, 5vw, 4rem);
-  --h2: clamp(1.3rem, 5vw, 3.5rem);
-  --h3: clamp(1rem, 5vw, 3rem);
-  --h4: clamp(0.8rem, 5vw, 2.5rem);
-  --h5: clamp(0.5rem, 5vw, 2rem);
-  --p: clamp(0.5rem, 5vw, 1.5rem);
+  --h2: clamp(1.3rem, 4.5vw, 3.5rem);
+  --h3: clamp(1rem, 4vw, 3rem);
+  --h4: clamp(0.8rem, 3.5vw, 2.5rem);
+  --h5: clamp(0.5rem, 3vw, 2rem);
+  --p: clamp(0.5rem, 2.5vw, 1.5rem);
   --uisize: clamp(2rem 5vw 4.5rem);
 }
 
