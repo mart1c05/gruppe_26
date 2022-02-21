@@ -40,7 +40,14 @@
   width: 10%;
   cursor: pointer;
 }
+.tomt_heart{
+  width: 10%;
+  cursor: pointer;
+}
 
+.displaynone{
+  display: none;
+}
 
 /** ---------- Filter Folde ud knap ---------- */
 

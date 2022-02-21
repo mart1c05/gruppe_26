@@ -20,11 +20,14 @@ async function hentData() {
 
 function vis() {
   document.querySelector(".produkt1").src = produkt.billede2;
-  document.querySelector("h2").textContent = produkt.navn;
-  document.querySelector("h4").textContent =
+  document.querySelector(".produkt2").src = produkt.billede3;
+  document.querySelector(".navn").textContent = produkt.navn;
+  document.querySelector(".beskrivelse").textContent =
     produkt.beskrivelse;
-  document.querySelector("p").textContent =
-    produkt.pris1;
+  document.querySelector(".materiale").textContent =
+    produkt.materiale;
+  document.querySelector(".pris").textContent =
+    produkt.pris1 + " " + produkt.pris2;
 }
 document.querySelector("button").addEventListener("click", () => {
   history.back();
