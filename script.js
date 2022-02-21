@@ -6,6 +6,8 @@ const options = {
 
 const foldbnt = document.querySelector(".foldout");
 const filterKnapper = document.querySelectorAll("nav button");
+const tomt = document.querySelector(".tomt_heart")
+const tomt = document.querySelector(".tomt_heart")
 
 document.addEventListener("DOMContentLoaded", start);
 let produkter;
@@ -68,3 +70,7 @@ function foldOut() {
   console.log("hi");
   foldbnt.classList.toggle("none");
 }
+
+.addEventListener("click", () =>{
+  displaynone;
+})
