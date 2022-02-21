@@ -7,11 +7,13 @@ const options = {
 const foldbnt = document.querySelector(".foldout");
 const filterKnapper = document.querySelectorAll("nav button");
 const tomt = document.querySelector(".tomt_heart")
-const tomt = document.querySelector(".tomt_heart")
+
 
 document.addEventListener("DOMContentLoaded", start);
 let produkter;
 let filter = "alle";
+let favoritter = [];
+let kurv = [];
 function start() {
   filterKnapper.forEach((knap) => knap.addEventListener("click", filtrerTøj));
   //loadJSON();
@@ -60,6 +62,12 @@ function vis(produkter) {
       klon.querySelector("img").addEventListener("click", () => {
         location.href = `singleview.html?id=${item._id}`;
       });
+      klon
+              .querySelector("article")
+              .addEventListener("click", () => favoritter.push(item));
+      klon
+              .querySelector("article")
+              .addEventListener("click", () => favoritter.push(ret));        
       data.appendChild(klon);
     }
   });
@@ -71,6 +79,3 @@ function foldOut() {
   foldbnt.classList.toggle("none");
 }
 
-.addEventListener("click", () =>{
-  displaynone;
-})
