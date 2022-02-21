@@ -1,26 +1,48 @@
+
+/** ---------- Section Der Indholder Artikler ---------- */
 .data_products {
-  margin-top: 50px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 400px));
-  justify-content: center;
-  gap: 5%;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 50px;
+  padding-bottom: 2%;
 }
 
 .products {
-  border: var(--gul) 10px solid;
-  border-radius: 20px;
+  border: 15px var(--gul) solid;
+  border-radius: 30px;
+
 }
 .products img {
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+ border-top-left-radius: 15px;
+ border-top-right-radius: 15px;
 }
 
 .products div {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  height: 50px;
+  padding: 2%;
 }
+
+
+/** ---------- Produkt Hjærte ---------- */
+
+
+.foto_icon{
+  display: grid;
+      grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    justify-items: end;
+}
+
+.foto_icon img{
+  grid-area: 1/1;
+}
+
+.full_heart{
+  width: 10%;
+  cursor: pointer;
+}
+
+
+/** ---------- Filter Folde ud knap ---------- */
 
 .foldout {
   display: flex;
@@ -74,3 +96,4 @@
     margin-bottom: 2%;
     margin-left: 2%;
 }
+

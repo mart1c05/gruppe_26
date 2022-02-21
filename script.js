@@ -53,28 +53,17 @@ function vis(produkter) {
       klon
         .querySelector("article")
         .addEventListener("click", () => visDetaljer(item));
+
+      //eventlistenerder peger hen på en ny side. det tager id'et med som vi så kan hante i det nye script
+      klon.querySelector("img").addEventListener("click", () => {
+        location.href = `singleview.html?id=${item._id}`;
+      });
       data.appendChild(klon);
     }
   });
-
-  // function visDetaljer(item) {
-  //   console.log(ret);
-  //   popup.style.display = "block";
-  //   popup.querySelector("h2").textContent = ret.navn;
-  //   popup.querySelector("img").src =
-  //     "medium/" + ret.billednavn + "-md.jpg";
-  //   popup.querySelector(".popup_beskrivelse").textContent =
-  //     ret.langbeskrivelse;
-  //   popup.querySelector(".popup_pris").textContent =
-  //     "Pris: " + ret.pris + ",-";
-  //   popup.querySelector(".popup_region").textContent =
-  //     ret.oprindelsesregion;
-  //     // }
-  //     document
-  //       .querySelector("#luk")
-  //       .addEventListener("click", () => (popup.style.display = "none"));
 }
 
+// toggler klassen none på knappen filter
 function foldOut() {
   console.log("hi");
   foldbnt.classList.toggle("none");

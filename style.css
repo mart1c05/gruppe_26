@@ -13,7 +13,7 @@
 }
 
 .gif {
-  width: 70vh;
+  width: 65vh;
 }
 
 /* ---------- KOLLEKTION ---------- */
@@ -45,6 +45,37 @@
 
 /* ---------- T-SHIRT & JEANS ---------- */
 
+#tshirtogjeans {
+  width: 100%;
+  display: grid;
+  justify-items: center;
+}
+
+.forsideTshirt {
+  /* background-image: url(billeder/1.jpg);
+  background-size: cover;
+  background-position: 50%;
+  width: 100%;
+  height: 100vh; */
+  width: 60%;
+  margin-bottom: 25px;
+ 
+}
+#tshirtogjeans img{
+  border-radius: 30px;
+}
+
+.forsideJeans {
+  /* background-image: url(billeder/2.jpg);
+  background-size: cover;
+  background-position: 50%;
+  width: 100%;
+  height: 100vh; */
+  width: 60%;
+  margin-bottom: 25px;
+}
+
+/* 
 #tshirtogjeans {
   padding: 2%;
   display: grid;
@@ -98,3 +129,4 @@ img {
   padding: 4%;
   margin-bottom: 2%;
 }
+ */
