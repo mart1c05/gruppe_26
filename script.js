@@ -6,7 +6,6 @@ const options = {
 
 const foldbnt = document.querySelector(".foldout");
 const filterKnapper = document.querySelectorAll("nav button");
-const tomt = document.querySelector(".tomt_heart")
 
 
 document.addEventListener("DOMContentLoaded", start);
@@ -57,6 +56,7 @@ function vis(produkter) {
         item.pris1 + "kr. " + item.pris2 + "kr.";
 
       //eventlistenerder peger hen på en ny side. det tager id'et med som vi så kan hante i det nye script
+      
       klon.querySelector("img").addEventListener("click", () => {
         location.href = `singleview.html?id=${item._id}`;
       });
@@ -82,8 +82,29 @@ function vis(produkter) {
               });        
       data.appendChild(klon);
     }
+    
+  });
+  const tomt = document.querySelectorAll(".tomt_heart");
+  const fyldt = document.querySelectorAll(".full_heart");
+
+  fyldt.forEach((e, i) => {
+    e.addEventListener("click", () => {
+      console.log("hjærte");
+      e.classList.toggle("displaynone");
+      tomt[i].classList.toggle("displaynone")
+    });
+  });
+
+  tomt.forEach((e, i) => {
+    e.addEventListener("click", () => {
+      console.log("hjærte");
+      e.classList.toggle("displaynone");
+      fyldt[i].classList.toggle("displaynone")
+
+    });
   });
 }
+
 
 // toggler klassen none på knappen filter
 function foldOut() {
