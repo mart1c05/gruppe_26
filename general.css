@@ -141,7 +141,7 @@ footer h3 {
   grid-column: 1/3;
 }
 
-.footerDiv3 ul {
+.footerDiv3 {
   text-align: center;
   justify-content: center;
 }
