@@ -14,6 +14,7 @@ let produkter;
 let filter = "alle";
 let favoritter = [];
 let kurv = [];
+
 function start() {
   filterKnapper.forEach((knap) => knap.addEventListener("click", filtrerTøj));
   //loadJSON();
@@ -54,20 +55,31 @@ function vis(produkter) {
 
       klon.querySelector("p").textContent =
         item.pris1 + "kr. " + item.pris2 + "kr.";
-      klon
-        .querySelector("article")
-        .addEventListener("click", () => visDetaljer(item));
 
       //eventlistenerder peger hen på en ny side. det tager id'et med som vi så kan hante i det nye script
       klon.querySelector("img").addEventListener("click", () => {
         location.href = `singleview.html?id=${item._id}`;
       });
       klon
-              .querySelector("article")
-              .addEventListener("click", () => favoritter.push(item));
+        .querySelector(".tomt_heart")
+        .addEventListener("click", () => {
+          console.log("works")
+          //pusher til et nyt array.
+          favoritter.push(item);
+          // tilføjer favoritter til sessionStorage, så vi kan hente det på en nyside.
+          sessionStorage.setItem("favoritter", JSON.stringify(favoritter));
+        });
       klon
-              .querySelector("article")
-              .addEventListener("click", () => favoritter.push(ret));        
+              .querySelector(".full_heart")
+              .addEventListener("click", () => {
+                //pusher til et nyt array.
+                favoritter.pop(item);
+                // tilføjer favoritter til sessionStorage, så vi kan hente det på en nyside.
+                sessionStorage.setItem(
+                  "favoritter",
+                  JSON.stringify(favoritter)
+                );
+              });        
       data.appendChild(klon);
     }
   });
