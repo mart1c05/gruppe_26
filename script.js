@@ -117,3 +117,8 @@ function foldOut() {
   foldbnt.classList.toggle("none");
 }
 
+function hearts () {
+
+  /* if/else statement til at vide om hjærterne er blivet valgt */
+
+}
