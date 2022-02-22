@@ -28,9 +28,14 @@ function vis() {
     produkt.materiale;
   document.querySelector(".pris").textContent =
     produkt.pris1 + " " + produkt.pris2;
+    document.querySelector(".buy").addEventListener("click", () => {
+      location.href = `kurv.html?id=${produkt._id}`;
+    });
 }
 document.querySelector("button").addEventListener("click", () => {
   history.back();
 });
+
+
 
 hentData();
