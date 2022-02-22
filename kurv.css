@@ -13,6 +13,7 @@
 
 /** ---------- Section Der Indholder Artikler ---------- */
 .data_products {
+  padding-top: 2%;
   margin-left: 50px;
   margin-right: 50px;
   margin-bottom: 50px;
@@ -28,20 +29,22 @@
   border-radius: 15px;
 }
 .products .info {
-  display: flex;
-  justify-content: space-between;
   background-color: var(--gul);
   color: white;
-  font-size: var(--h5);
-  text-align: center;
+}
+
+.info {
+  display: flex;
+  justify-items: left;
+  justify-content: space-evenly;
 }
 .info p {
-  display: grid;
-  justify-items: right;
   font-family: var(--brødtekst);
+  font-size: var(--h5);
 }
 .info h3 {
   font-family: var(--brødtekst);
+  font-size: var(--h5);
 }
 .products img {
   border-radius: 15px;
