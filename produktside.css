@@ -1,8 +1,14 @@
+h1 {
+  text-align: center;
+  margin: 40px;
+  color: green;
+}
 
 /** ---------- Section Der Indholder Artikler ---------- */
 .data_products {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  margin: 20px;
   gap: 50px;
   padding-bottom: 2%;
 }
@@ -10,43 +16,69 @@
 .products {
   border: 15px var(--gul) solid;
   border-radius: 30px;
+  background-color: var(--gul);
+  padding: 10px;
 
+  margin: auto;
+}
+.products .info {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--gul);
+  color: white;
+  border: 2px solid white;
+  border-radius: 10px;
+  margin-top: 10px;
+  text-align: center;
+  width: 100%;
+}
+.info p {
+  border-left: white 2px solid;
+  font-family: var(--brødtekst);
+}
+.info h3 {
+  font-family: var(--brødtekst);
 }
 .products img {
- border-top-left-radius: 15px;
- border-top-right-radius: 15px;
- cursor: pointer;
+  border-radius: 15px;
+  cursor: pointer;
 }
 
 .products div {
   padding: 2%;
 }
 
+@media (min-width: 600px) {
+  .products {
+    max-width: 80%;
+  }
+}
 
 /** ---------- Produkt Hjærte ---------- */
 
-
-.foto_icon{
+.foto_icon {
   display: grid;
-      grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    justify-items: end;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  justify-items: end;
 }
 
-.foto_icon img{
+.foto_icon img {
   grid-area: 1/1;
 }
 
-.full_heart{
+.full_heart {
+  margin: 5px;
   width: 10%;
   cursor: pointer;
 }
-.tomt_heart{
+.tomt_heart {
+  margin: 5px;
   width: 10%;
   cursor: pointer;
 }
 
-.displaynone{
+.displaynone {
   display: none;
 }
 
@@ -87,21 +119,20 @@
   /* opacity: 0; */
 }
 
-.unisexh1{
-    font-family: var(--overskrift);
-    font-size: var(--h2);
-    margin-left: 2%;
+.unisexh1 {
+  font-family: var(--overskrift);
+  font-size: var(--h2);
+  margin-left: 2%;
 }
 
-.sorterKnap{
-    width: 150px;
-    height: 50px;
-    background-color: var(--orange);
-    color: var(--hvid);
-    border:none;
-    border-radius: 15px;
-    margin-top: 2%;
-    margin-bottom: 2%;
-    margin-left: 2%;
+.sorterKnap {
+  width: 150px;
+  height: 50px;
+  background-color: var(--pink);
+  color: var(--hvid);
+  border: none;
+  border-radius: 15px;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-left: 2%;
 }
-
