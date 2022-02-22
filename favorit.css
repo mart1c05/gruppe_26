@@ -1,16 +1,17 @@
 .data_products {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 400px));
   gap: 50px;
   padding-bottom: 2%;
   margin: 8%;
+  /* justify-content: center; */
 }
 
 .products {
   border: 15px var(--pink) solid;
   border-radius: 30px;
   background-color: var(--pink);
-  padding: 5%;
+  padding: 10px;
 }
 .products img {
   border-radius: 15px;
@@ -36,7 +37,7 @@
   font-family: var(--brødtekst);
 }
 .info h3 {
-  font-family: var(--overskrift);
+  font-family: var(--brødtekst);
   padding: 5px;
 }
 .med_spand {
@@ -46,4 +47,9 @@
   padding-top: 5px;
   object-fit: contain;
   max-width: 12%;
+}
+@media (min-width: 600px) {
+  .products {
+    max-width: 80%;
+  }
 }

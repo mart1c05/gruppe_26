@@ -5,8 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex" />
-    <link rel="stylesheet" href="https://use.typekit.net/ztr3ibo.css">
-    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/ztr3ibo.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@100;300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="general.css" />
     <link rel="stylesheet" href="favorit.css" />
     <title>Bomulds Børns</title>
@@ -41,8 +44,13 @@
     </div>
   </header>
   <body>
-    <nav>
-      <button data-filter="alle" class="valgt">Filtrer</button>
+    <button class="sorterKnap" onclick="foldOut()">vis filter menu</button>
+    <nav class="foldout">
+      <button data-kategori="alle" class="valgt">alle</button>
+      <button data-kategori="T-shirt">T-shirts</button>
+      <button data-kategori="jeans">Jeans</button>
+      <!--    <button data-Kategori="Kategori" class="valgt">Filtrer</button>
+      <button data-Kategori="Kategori" class="valgt">Filtrer</button> -->
     </nav>
     <section class="data_products"></section>
     <template>

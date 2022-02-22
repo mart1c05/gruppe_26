@@ -1,8 +1,14 @@
+h1 {
+  text-align: center;
+  margin: 40px;
+  color: green;
+}
 
 /** ---------- Section Der Indholder Artikler ---------- */
 .data_products {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  margin: 20px;
   gap: 50px;
   padding-bottom: 2%;
 }
@@ -10,98 +16,73 @@
 .products {
   border: 15px var(--gul) solid;
   border-radius: 30px;
+  background-color: var(--gul);
+  padding: 10px;
 
+  margin: auto;
+}
+.products .info {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--gul);
+  color: white;
+  border: 2px solid white;
+  border-radius: 10px;
+  margin-top: 10px;
+  text-align: center;
+  width: 100%;
+}
+.info p {
+  border-left: white 2px solid;
+  font-family: var(--brødtekst);
+}
+.info h3 {
+  font-family: var(--brødtekst);
 }
 .products img {
- border-top-left-radius: 15px;
- border-top-right-radius: 15px;
- cursor: pointer;
+  border-radius: 15px;
+  cursor: pointer;
 }
 
 .products div {
   padding: 2%;
 }
 
+@media (min-width: 600px) {
+  .products {
+    max-width: 80%;
+  }
+}
 
 /** ---------- Produkt Hjærte ---------- */
 
-
-.foto_icon{
+.foto_icon {
   display: grid;
-      grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    justify-items: end;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  justify-items: end;
 }
 
-.foto_icon img{
+.foto_icon img {
   grid-area: 1/1;
 }
 
-.full_heart{
+.full_heart {
+  margin: 5px;
   width: 10%;
   cursor: pointer;
 }
-.tomt_heart{
+.tomt_heart {
+  margin: 5px;
   width: 10%;
   cursor: pointer;
 }
 
-.displaynone{
+.displaynone {
   display: none;
 }
-
-/** ---------- Filter Folde ud knap ---------- */
-
-.foldout {
-  display: flex;
-  background-color: rgb(255, 255, 255);
-  height: 0px;
-  transition: 0.5s;
-  opacity: 1;
-  overflow: hidden;
-  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset,
-    rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
-  gap: 5%;
-  row-gap: 10px;
-  padding-top: 0px;
-  padding-bottom: 0px;
-  padding-left: 2%;
-  align-items: center;
-  flex-wrap: wrap;
+.unisexh1 {
+  font-family: var(--overskrift);
+  font-size: var(--h2);
+  margin-left: 2%;
 }
-
-.foldout button {
-  border: none;
-  background-color: var(--gul);
-  border-radius: 15px;
-  width: 100px;
-  height: 25px;
-  box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px;
-}
-
-.none {
-  height: 100px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-left: 2%;
-  /* opacity: 0; */
-}
-
-.unisexh1{
-    font-family: var(--overskrift);
-    font-size: var(--h2);
-    margin-left: 2%;
-}
-
-.sorterKnap{
-    width: 150px;
-    height: 50px;
-    background-color: var(--orange);
-    color: var(--hvid);
-    border:none;
-    border-radius: 15px;
-    margin-top: 2%;
-    margin-bottom: 2%;
-    margin-left: 2%;
-}
-

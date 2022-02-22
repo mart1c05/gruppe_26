@@ -7,7 +7,6 @@ const options = {
 const foldbnt = document.querySelector(".foldout");
 const filterKnapper = document.querySelectorAll("nav button");
 
-
 document.addEventListener("DOMContentLoaded", start);
 let produkter;
 let filter = "alle";
@@ -36,7 +35,7 @@ async function hentData() {
   vis(produkter);
 }
 hentData();
-
+hearts();
 function vis(json) {
   console.log(json);
 }
@@ -56,38 +55,30 @@ function vis(produkter) {
         item.pris1 + "kr. " + item.pris2 + "kr.";
 
       //eventlistenerder peger hen på en ny side. det tager id'et med som vi så kan hante i det nye script
-      
+
       klon.querySelector("img").addEventListener("click", () => {
         location.href = `singleview.html?id=${item._id}`;
       });
-      klon
-        .querySelector(".tomt_heart")
-        .addEventListener("click", () => {
-          console.log("works")
-          //pusher til et nyt array.
-          favoritter.push(item);
-          // tilføjer favoritter til sessionStorage, så vi kan hente det på en nyside.
-          sessionStorage.setItem("favoritter", JSON.stringify(favoritter));
-        });
-      klon
-              .querySelector(".full_heart")
-              .addEventListener("click", () => {
-                //pusher til et nyt array.
-                favoritter.pop(item);
-                // tilføjer favoritter til sessionStorage, så vi kan hente det på en nyside.
-                sessionStorage.setItem(
-                  "favoritter",
-                  JSON.stringify(favoritter)
-                );
-              });        
+      klon.querySelector(".tomt_heart").addEventListener("click", () => {
+        console.log("works");
+        //pusher til et nyt array.
+        favoritter.push(item);
+        // tilføjer favoritter til sessionStorage, så vi kan hente det på en nyside.
+        sessionStorage.setItem("favoritter", JSON.stringify(favoritter));
+      });
+      klon.querySelector(".full_heart").addEventListener("click", () => {
+        //pusher til et nyt array.
+        favoritter.pop(item);
+        // tilføjer favoritter til sessionStorage, så vi kan hente det på en nyside.
+        sessionStorage.setItem("favoritter", JSON.stringify(favoritter));
+      });
       data.appendChild(klon);
     }
-    
   });
   const tomt = document.querySelectorAll(".tomt_heart");
   const fyldt = document.querySelectorAll(".full_heart");
 
-  // for hver fyldthjærte er der en EventListener. 
+  // for hver fyldthjærte er der en EventListener.
   fyldt.forEach((e, i) => {
     e.addEventListener("click", () => {
       console.log("hjærte");
@@ -104,12 +95,10 @@ function vis(produkter) {
     e.addEventListener("click", () => {
       console.log("hjærte");
       e.classList.toggle("displaynone");
-      fyldt[i].classList.toggle("displaynone")
-
+      fyldt[i].classList.toggle("displaynone");
     });
   });
 }
-
 
 // toggler klassen none på knappen filter
 function foldOut() {
@@ -117,8 +106,15 @@ function foldOut() {
   foldbnt.classList.toggle("none");
 }
 
-function hearts () {
-
+function hearts() {
   /* if/else statement til at vide om hjærterne er blivet valgt */
+  let checkFav = sessionStorage.getItem("favoritter", JSON.stringify(favoritter))
 
+  if (checkFav === null) {
+    console.log("there is nothing in here");
+    console.log(checkFav)
+  } else {
+    console.log("Stuff has been picked");
+    
+  }
 }
