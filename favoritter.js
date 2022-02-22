@@ -1,16 +1,17 @@
 /* let produkt = sessionStorage.getItem("favorit"); */
 //henter vores string, som tidligere var en Array. Den laves derefter om til en Array igen.
-let favoritter = JSON.parse(sessionStorage.getItem("favoritter"));
+let favorit = JSON.parse(sessionStorage.getItem("favorit"));
 const spand = document.querySelectorAll(".spand");
 
-console.log(favoritter);
 
-function printud(favoritter) {
+console.log(favorit);
+
+function printud(favorit) {
   const data = document.querySelector(".data_products");
   const tøjTemplate = document.querySelector("template");
   data.textContent = "";
 
-  favoritter.forEach((item) => {
+  favorit.forEach((item) => {
     console.log(item);
     const klon = tøjTemplate.cloneNode(true).content;
     klon.querySelector("h3").textContent = item.navn;
@@ -20,13 +21,13 @@ function printud(favoritter) {
       //når spanden klikkes, start annonym(arrow funktion) funktion
     klon.querySelector(".spand").addEventListener("click", () => {
       // finder id'et af den valgte spand
-      let id = favoritter.indexOf(item)
+      let id = favorit.indexOf(item)
       console.log(id)
       //fjerner alt imellem vores valgt id os så en index frem. Altså kun den valgte spand fjernes fra listen.
-      favoritter.splice(id, 1);
-      console.log(favoritter);
-      //Tilføjer vores array favoritter til sessionStorage
-      sessionStorage.setItem("favoritter", JSON.stringify(favoritter));
+      favorit.splice(id, 1);
+      console.log(favorit);
+      //Tilføjer vores array favorit til sessionStorage
+      sessionStorage.setItem("favorit", JSON.stringify(favorit));
       // reloader vores side for de viste produkter bliver opdateret.
       window.location.reload();
     });
@@ -36,10 +37,5 @@ function printud(favoritter) {
 
 
 
-printud(favoritter);
+printud(favorit);
 
-// toggler klassen none på knappen filter
-function foldOut() {
-  console.log("hi");
-  foldbnt.classList.toggle("none");
-}
