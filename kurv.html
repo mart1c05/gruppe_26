@@ -99,7 +99,9 @@
         kurvIndhold.forEach((item) => {
           const klon = tøjTemplate.cloneNode(true).content;
           klon.querySelector("img").src = item.billede1;
+          data.appendChild(klon);
         });
+        
       }
 
       hentData();
