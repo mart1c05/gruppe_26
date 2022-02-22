@@ -74,36 +74,72 @@
       <input type="checkbox" />
       <span class="checkmark"></span
     ></label>
-    <footer>
-      <div class="footerDiv1">
-        <h3>Her bor vi</h3>
-        <address>
-          Keavej 2
-          <br />
-          2000 København
-          <br />
-          Danmark
-        </address>
-      </div>
-      <div class="footerDiv2">
-        <h3>Kontakt</h3>
-        <p>
-          <br />
-          Telefon nr.: 00 00 00 00
-          <br />
-          Hverdage: 08-15
-          <br />
-          Weekend: 10-14
-        </p>
-      </div>
-      <div class="footerDiv3">
-        <h3>Find os på sociale medier</h3>
-        <div>
-          <img src="iconer/facebook.png" alt="" />
-          <img src="iconer/Instagram.png" alt="" />
-          <img src="iconer/tiktok.png" alt="" />
-        </div>
-      </div>
-    </footer>
+
+    <script>
+      const urlParams = new URLSearchParams(window.location.search);
+      const id = urlParams.get("id");
+      const url = `https://bomuldsboern-26e2.restdb.io/rest/produkter/${id}`;
+      const options = {
+        headers: {
+          "x-apikey": "620f5c4634fd62156585879d",
+        },
+      };
+
+      let produkt;
+      let kurvIndhold = [];
+
+      async function hentData() {
+        console.log("hi");
+        const responds = await fetch(url, options);
+        produkt = await responds.json();
+        kurvIndhold.push(produkt);
+        console.log(kurvIndhold);
+        vis(kurvIndhold);
+      }
+
+      function vis(kurvIndhold) {
+        const data = document.querySelector(".data_products");
+        const tøjTemplate = document.querySelector("template");
+        data.textContent = "";
+
+        kurvIndhold.forEach((item) => {
+          const klon = tøjTemplate.cloneNode(true).content;
+          klon.querySelector("img").src = item.billede1;
+        });
+      }
+
+      hentData();
+    </script>
   </body>
+  <footer>
+    <div class="footerDiv1">
+      <h3>Her bor vi</h3>
+      <address>
+        Keavej 2
+        <br />
+        2000 København
+        <br />
+        Danmark
+      </address>
+    </div>
+    <div class="footerDiv2">
+      <h3>Kontakt</h3>
+      <p>
+        <br />
+        Telefon nr.: 00 00 00 00
+        <br />
+        Hverdage: 08-15
+        <br />
+        Weekend: 10-14
+      </p>
+    </div>
+    <div class="footerDiv3">
+      <h3>Find os på sociale medier</h3>
+      <div>
+        <img src="iconer/facebook.png" alt="" />
+        <img src="iconer/Instagram.png" alt="" />
+        <img src="iconer/tiktok.png" alt="" />
+      </div>
+    </div>
+  </footer>
 </html>
