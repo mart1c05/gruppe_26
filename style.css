@@ -1,7 +1,7 @@
 /* ---------- SPLASHIMAGE ---------- */
 
 #splashimage {
-  background-image: url(billeder/baggrund-01.svg);
+  background-image: url(/billeder/splash_billede.svg);
   background-size: cover;
   background-position: 50%;
   height: 80vh;
