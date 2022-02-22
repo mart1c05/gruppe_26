@@ -43,7 +43,10 @@ function vis(json) {
 function vis(produkter) {
   const data = document.querySelector(".data_products");
   const tøjTemplate = document.querySelector("template");
+  let favoritter = JSON.parse(localStorage.getItem("favoritter"));
+
   data.textContent = "";
+  
   produkter.forEach((item) => {
     console.log("Kategori", item.kategori);
     if (filter == item.kategori || filter == "alle") {
@@ -64,13 +67,13 @@ function vis(produkter) {
         //pusher til et nyt array.
         favoritter.push(item);
         // tilføjer favoritter til sessionStorage, så vi kan hente det på en nyside.
-        sessionStorage.setItem("favoritter", JSON.stringify(favoritter));
+        localStorage.setItem("favoritter", JSON.stringify(favoritter));
       });
       klon.querySelector(".full_heart").addEventListener("click", () => {
         //pusher til et nyt array.
         favoritter.pop(item);
         // tilføjer favoritter til sessionStorage, så vi kan hente det på en nyside.
-        sessionStorage.setItem("favoritter", JSON.stringify(favoritter));
+        localStorage.setItem("favoritter", JSON.stringify(favoritter));
       });
       data.appendChild(klon);
     }
@@ -108,7 +111,7 @@ function foldOut() {
 
 function hearts() {
   /* if/else statement til at vide om hjærterne er blivet valgt */
-  let checkFav = sessionStorage.getItem("favoritter", JSON.stringify(favoritter))
+  let checkFav = localStorage.getItem("favoritter", JSON.stringify(favoritter));
 
   if (checkFav === null) {
     console.log("there is nothing in here");
