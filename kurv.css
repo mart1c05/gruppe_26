@@ -8,54 +8,71 @@
   font-family: var(--overskrift);
   font-size: var(--h2);
   color: var(--grå);
+  margin-bottom: 30px;
 }
 
 /** ---------- Section Der Indholder Artikler ---------- */
 .data_products {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-  margin: 20px;
-  gap: 50px;
-  padding-bottom: 2%;
+  padding-top: 2%;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 50px;
+  background-color: var(--gul);
+  border-radius: 15px;
 }
 
 .products {
-  border: 15px var(--gul) solid;
-  border-radius: 30px;
+  display: grid;
+  border: 50px var(--gul) solid;
   background-color: var(--gul);
-  padding: 10px;
-
-  margin: auto;
+  grid-template-columns: 1fr 2fr;
+  border-radius: 15px;
 }
 .products .info {
-  display: flex;
-  justify-content: space-between;
   background-color: var(--gul);
   color: white;
-  border: 2px solid white;
-  border-radius: 10px;
-  margin-top: 10px;
-  text-align: center;
-  width: 100%;
+}
+
+.info {
+  display: flex;
+  justify-items: left;
+  justify-content: space-evenly;
 }
 .info p {
-  border-left: white 2px solid;
   font-family: var(--brødtekst);
+  font-size: var(--h5);
 }
 .info h3 {
   font-family: var(--brødtekst);
+  font-size: var(--h5);
 }
+
 .products img {
   border-radius: 15px;
+  width: 70%;
   cursor: pointer;
 }
 
-.products div {
-  padding: 2%;
+.total {
+  display: grid;
+  justify-items: right;
+  margin-right: 120px;
+}
+
+.vilkaar {
+  display: grid;
+
+  grid-template-columns: 1fr 1fr 1fr;
+}
+label {
+  grid-column: 2/3;
 }
 
 @media (min-width: 600px) {
   .products {
     max-width: 80%;
+  }
+  label {
+    grid-column: 3/4;
   }
 }

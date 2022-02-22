@@ -68,8 +68,12 @@ header {
   justify-content: space-between;
   align-items: center;
   padding-inline: 2%;
+  position: fixed;
+  margin-top: -100px;
 }
-
+main {
+  margin-top: 100px;
+}
 .icons {
   display: flex;
   height: 50px;
@@ -145,7 +149,7 @@ footer p, address{
 .footerDiv1 {
   grid-column: 1/2;
   display: grid;
-    justify-items: center;
+  justify-items: center;
 }
 .footerDiv2 {
   grid-column: 2/3;
@@ -177,7 +181,7 @@ footer p, address{
     grid-column: 3/4;
   }
 
-  .footerDiv3 div{
+  .footerDiv3 div {
     display: flex;
     justify-content: center;
     
