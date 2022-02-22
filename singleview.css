@@ -1,36 +1,33 @@
-
 /** ---------- Tilbage Knap ---------- */
 
-button{
-    margin: 2%;
-    padding: 1% 2% 1% 2%;
-    background-color: var(--orange);
-    border: none;
-    border-radius: 15px;
-    color: var(--hvid);
-    cursor: pointer;
+button {
+  margin: 2%;
+  padding: 1% 2% 1% 2%;
+  background-color: var(--orange);
+  border: none;
+  border-radius: 15px;
+  color: var(--hvid);
+  cursor: pointer;
 }
 
 /** ---------- SingleView Container ---------- */
-article{
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-    overflow: scroll;
-    font-family: var(--brødtekst);
+article {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  overflow: scroll;
+  font-family: var(--brødtekst);
 }
 
 /** ---------- Produkt Billederne ---------- */
-.produktBilleder{
-    overflow: scroll;
+.produktBilleder {
+  overflow: scroll;
 }
 
 /** ---------- Produkt Tekst ---------- */
 
-.produktTekst{
-    padding: 5%;
-    display: flex;
-    flex-direction: column;
-    row-gap: 15px;
+.produktTekst {
+  padding: 5%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
 }
-
-

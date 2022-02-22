@@ -87,14 +87,19 @@ function vis(produkter) {
   const tomt = document.querySelectorAll(".tomt_heart");
   const fyldt = document.querySelectorAll(".full_heart");
 
+  // for hver fyldthjærte er der en EventListener. 
   fyldt.forEach((e, i) => {
     e.addEventListener("click", () => {
       console.log("hjærte");
+      // Det valgte hjærte for "toggle" klassen displaynone, der for den til at forsvinde eller dukke frem.
       e.classList.toggle("displaynone");
-      tomt[i].classList.toggle("displaynone")
+      // "i" er vores valgte hjærtes ID, den brugest til finde det tommehjærte i array'en "tomt" der matcher med den vi har klikket på
+      // derefter toggler vi klassen displaynone, der for den til at forsvinde eller dukke frem.
+      tomt[i].classList.toggle("displaynone");
     });
   });
 
+  // denne "arrow function" gør der samme sam den ovenfor, men omvendt.
   tomt.forEach((e, i) => {
     e.addEventListener("click", () => {
       console.log("hjærte");
@@ -112,3 +117,8 @@ function foldOut() {
   foldbnt.classList.toggle("none");
 }
 
+function hearts () {
+
+  /* if/else statement til at vide om hjærterne er blivet valgt */
+
+}
