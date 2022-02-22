@@ -1,0 +1,61 @@
+.overskrift {
+  display: grid;
+  justify-items: center;
+  margin-top: 80px;
+}
+
+.overskrift h2 {
+  font-family: var(--overskrift);
+  font-size: var(--h2);
+  color: var(--grå);
+}
+
+/** ---------- Section Der Indholder Artikler ---------- */
+.data_products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  margin: 20px;
+  gap: 50px;
+  padding-bottom: 2%;
+}
+
+.products {
+  border: 15px var(--gul) solid;
+  border-radius: 30px;
+  background-color: var(--gul);
+  padding: 10px;
+
+  margin: auto;
+}
+.products .info {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--gul);
+  color: white;
+  border: 2px solid white;
+  border-radius: 10px;
+  margin-top: 10px;
+  text-align: center;
+  width: 100%;
+}
+.info p {
+  border-left: white 2px solid;
+  font-family: var(--brødtekst);
+}
+.info h3 {
+  font-family: var(--brødtekst);
+}
+.products img {
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.products div {
+  padding: 2%;
+}
+
+@media (min-width: 600px) {
+  .products {
+    max-width: 80%;
+  }
+}
