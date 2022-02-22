@@ -37,3 +37,9 @@ function printud(favoritter) {
 
 
 printud(favoritter);
+
+// toggler klassen none på knappen filter
+function foldOut() {
+  console.log("hi");
+  foldbnt.classList.toggle("none");
+}

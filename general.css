@@ -169,3 +169,55 @@ footer h3 {
     grid-column: 3/4;
   }
 }
+
+/** ---------- Filter Folde ud knap ---------- */
+
+.foldout {
+  display: flex;
+  background-color: rgb(255, 255, 255);
+  height: 0px;
+  transition: 0.5s;
+  opacity: 1;
+  overflow: hidden;
+  box-shadow: rgb(208, 214, 171) 3px 3px 6px 0px inset,
+    rgba(254, 255, 221, 0.5) -3px -3px 6px 1px inset;
+  gap: 5%;
+  row-gap: 10px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-left: 2%;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: transparent;
+}
+
+.sorterKnap {
+  width: 150px;
+  height: 50px;
+  background-color: var(--pink);
+  color: var(--hvid);
+  border: none;
+  border-radius: 15px;
+  margin-top: 2%;
+  margin-bottom: 2%;
+  margin-left: 2%;
+  font-family: var(--brødtekst);
+}
+.foldout button {
+  border: none;
+  background-color: var(--gul);
+  border-radius: 15px;
+  width: 100px;
+  height: 25px;
+  /* box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px; */
+  font-family: var(--brødtekst);
+  color: white;
+}
+
+.none {
+  height: 100px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 2%;
+  /* opacity: 0; */
+}
