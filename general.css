@@ -11,6 +11,13 @@ img {
 a {
   text-decoration: transparent;
 }
+a:hover {
+  opacity: 80%;
+}
+button:hover {
+  opacity: 80%;
+  cursor: pointer;
+}
 
 body {
   background-color: rgb(252, 252, 222);
