@@ -1,7 +1,6 @@
 .overskrift {
   display: grid;
   justify-items: center;
-  margin-top: 80px;
 }
 
 .overskrift h2 {
@@ -59,19 +58,25 @@
   grid-column: 2/3;
 }
 
+.checkbox {
+  display: flex;
+  align-items: center;
+}
+
 .total h3 {
   font-family: var(--brødtekst);
   font-size: var(--h3);
 }
 
-.vilkaar h5 {
-  font-family: var(--brødtekst);
-  font-size: var(--h5);
-}
-
 .vilkaar p {
   font-family: var(--brødtekst);
   font-size: 1rem;
+}
+
+.vilkaar h5 {
+  font-family: var(--brødtekst);
+  font-size: var(--h5);
+  text-decoration: underline;
 }
 
 .total {
