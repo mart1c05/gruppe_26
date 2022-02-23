@@ -108,6 +108,7 @@ input {
   color: rgb(66, 66, 66);
   grid-column: 3/4;
   margin-top: 20px;
+  margin-bottom: 200px;
 }
 /** ---------- Betalings section (web format) ---------- */
 
@@ -137,7 +138,6 @@ input {
   }
   .betal h5 {
     grid-column: 4/5;
-    margin-bottom: 200px;
   }
 }
 /** ---------- Dette bliver vist hvis kurven er tom ---------- */
