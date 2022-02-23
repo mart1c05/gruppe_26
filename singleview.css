@@ -1,3 +1,7 @@
+main {
+  margin: 30px;
+}
+
 /** ---------- Tilbage Knap ---------- */
 
 button {
@@ -13,21 +17,78 @@ button {
 /** ---------- SingleView Container ---------- */
 article {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-  overflow: scroll;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  color: var(--grå);
   font-family: var(--brødtekst);
 }
 
 /** ---------- Produkt Billederne ---------- */
-.produktBilleder {
-  overflow: scroll;
+img {
+  border-radius: 15px;
 }
 
 /** ---------- Produkt Tekst ---------- */
+
+h2 {
+  text-align: center;
+}
 
 .produktTekst {
   padding: 5%;
   display: flex;
   flex-direction: column;
   row-gap: 15px;
+  border: 2px solid var(--orange);
+  border-radius: 15px;
+}
+/** ---------- Kurv Knap ---------- */
+
+.kurven {
+  display: flex;
+  background-color: var(--grøn);
+  font-family: var(--uiElementer);
+  place-self: end;
+
+  max-width: 130px;
+}
+.kurven p {
+  padding-top: 4px;
+  padding: 5px;
+}
+
+.kurven img {
+  max-width: 20%;
+}
+
+/** ---------- levering section ---------- */
+#levering {
+  margin-top: 30px;
+}
+.leveringsinfo {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  border: 2px solid var(--orange);
+  border-radius: 15px;
+  color: var(--grå);
+}
+.leveringsinfo h3 {
+  font-family: var(--brødtekst);
+  text-align: center;
+  border-bottom: 2px solid var(--orange);
+  padding: 10px;
+}
+.leveringsinfo p {
+  font-family: var(--brødtekst);
+  padding: 10px;
+}
+@media (min-width: 600px) {
+  .produktBilleder {
+    padding: 30px;
+    max-width: 60%;
+    margin: auto;
+  }
+  .produktBilleder h2 {
+    margin-bottom: 20px;
+  }
 }
