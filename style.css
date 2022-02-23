@@ -22,6 +22,7 @@
 }
 
 #kollektion h2 {
+  margin-top: 50px;
   font-family: var(--overskrift);
   font-size: clamp(2rem, 6vw, 5rem);
   /* color: var(--gul); */
@@ -59,12 +60,17 @@
     max-width: 60%;
     margin-left: auto;
     margin-right: auto;
-    gap: 200px;
+    gap: 160px;
     margin-top: -20px;
   }
   .forsideTshirt a,
   .forsideJeans a {
     font-size: var(--h4);
+  }
+
+  #om_os {
+    justify-items: center;
+    padding: 10px;
   }
 }
 
@@ -78,6 +84,7 @@
   /*   background-color: var(--pink); */
   background-color: var(--orange);
   padding: 40px;
+  margin-top: 150px;
 }
 
 .vores_mål,
@@ -129,7 +136,7 @@
 .leveringsinfo div {
   display: grid;
   justify-items: center;
-      padding-top: 6%;
+  padding-top: 6%;
 }
 
 .leveringsinfo h4 {
@@ -149,6 +156,5 @@
   #levering {
   }
   .leveringsinfo h4 {
-  
   }
 }
