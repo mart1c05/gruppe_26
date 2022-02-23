@@ -1,3 +1,11 @@
+h2 {
+  font-family: var(--overskrift);
+  font-size: var(--h2);
+  color: green;
+  padding: 80px;
+  text-align: center;
+}
+
 .data_products {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 400px));
@@ -54,9 +62,9 @@
   }
 }
 
-.spand{
+.spand {
   cursor: pointer;
 }
-.displayNone{
+.displayNone {
   display: none;
 }
