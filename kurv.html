@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="kurv.css" />
     <title>Bomulds Børns</title>
   </head>
-  <header>
+  <header><body>
     <div class="logooverskift">
       <a href="index.html"
         ><img class="logo" src="iconer/logo_bomuld.svg" alt=""
@@ -47,7 +47,7 @@
       /></a>
     </div>
   </header>
-  <body>
+  
     <div class="overskrift">
       <h2>Din indkøbskurv</h2>
     </div>
@@ -82,7 +82,45 @@
       <h5>TIL KASSEN</h5>
     </div>
 
-    <script>
+    
+  
+  <footer>
+    <div class="footerDiv1">
+      <div>
+        <h3>Her bor vi</h3>
+        <address>
+          Keavej 2
+          <br />
+          2000 København
+          <br />
+          Danmark
+        </address>
+      </div>
+    </div>
+    <div class="footerDiv2">
+      <h3>Kontakt Os</h3>
+      <p>
+        <br />
+        Telefon nr: + 45 40 30 40 10
+        <br />
+        Hverdage: 08-15
+        <br />
+        Weekend: 10-14
+        <br />
+        <br />
+        bomuldsboern@bomuldsboern.dk
+      </p>
+    </div>
+    <div class="footerDiv3">
+      <h3>Find os på sociale medier</h3>
+      <div>
+        <img src="iconer/facebook.png" alt="" />
+        <img src="iconer/Instagram.png" alt="" />
+        <img src="iconer/tiktok.png" alt="" />
+      </div>
+    </div>
+  </footer>
+  <script>
       const urlParams = new URLSearchParams(window.location.search);
       const id = urlParams.get("id");
       const url = `https://bomuldsboern-26e2.restdb.io/rest/produkter/${id}`;
@@ -124,42 +162,5 @@
       }
 
       hentData();
-    </script>
-  </body>
-  <footer>
-    <div class="footerDiv1">
-      <div>
-        <h3>Her bor vi</h3>
-        <address>
-          Keavej 2
-          <br />
-          2000 København
-          <br />
-          Danmark
-        </address>
-      </div>
-    </div>
-    <div class="footerDiv2">
-      <h3>Kontakt Os</h3>
-      <p>
-        <br />
-        Telefon nr: + 45 40 30 40 10
-        <br />
-        Hverdage: 08-15
-        <br />
-        Weekend: 10-14
-        <br />
-        <br />
-        bomuldsboern@bomuldsboern.dk
-      </p>
-    </div>
-    <div class="footerDiv3">
-      <h3>Find os på sociale medier</h3>
-      <div>
-        <img src="iconer/facebook.png" alt="" />
-        <img src="iconer/Instagram.png" alt="" />
-        <img src="iconer/tiktok.png" alt="" />
-      </div>
-    </div>
-  </footer>
+    </script></body>
 </html>
