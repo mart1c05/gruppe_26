@@ -22,19 +22,16 @@ function vis() {
   document.querySelector(".produkt1").src = produkt.billede2;
   
   document.querySelector(".navn").textContent = produkt.navn;
-  document.querySelector(".beskrivelse").textContent =
+  document.querySelector(".beskrivelse").textContent =  produkt.beskrivelse
     produkt.beskrivelse;
-  document.querySelector(".materiale").textContent =
+  document.querySelector(".materiale").textContent =$
     produkt.materiale;
   document.querySelector(".pris").textContent =
-<<<<<<< HEAD
     produkt.pris1 + " kr. " + produkt.pris2 + " kr.";
-=======
     produkt.pris1 + " " + produkt.pris2;
     document.querySelector(".buy").addEventListener("click", () => {
       location.href = `kurv.html?id=${produkt._id}`;
     });
->>>>>>> ac9d3918e34d8d78a30dd5c4ea2b1ce35dcc4f94
 }
 document.querySelector("button").addEventListener("click", () => {
   history.back();
