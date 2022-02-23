@@ -38,7 +38,7 @@ function printud(favoritter) {
       klon.querySelector("h3").textContent = item.navn;
       klon.querySelector("img").src = item.billede1;
       klon.querySelector("p").textContent =
-        item.pris1 + "kr. " + item.pris2 + "kr.";
+        item.pris1 + "DKK " ;
 
       klon.querySelector("img").addEventListener("click", () => {
         location.href = `singleview.html?id=${item._id}`;

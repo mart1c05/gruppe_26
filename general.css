@@ -185,11 +185,11 @@ address {
 }
 
 .footerDiv3 div {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-content: center;
-    justify-items: center;
-  }
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  justify-items: center;
+}
 @media (min-width: 600px) {
   footer {
     grid-template-columns: 1fr 1fr 1fr;
@@ -222,7 +222,8 @@ address {
 
 .foldout {
   display: flex;
-  background-color: rgb(255, 255, 255);
+  background-color: #fdbd5e3b;
+
   height: 0px;
   transition: 0.5s;
   opacity: 1;
@@ -236,7 +237,6 @@ address {
   padding-left: 2%;
   align-items: center;
   flex-wrap: wrap;
-  background-color: transparent;
 }
 
 .sorterKnap {
@@ -255,7 +255,7 @@ address {
 .foldout button {
   border: none;
   background-color: var(--gul);
-  border-radius: 15px;
+  border-radius: 8px;
   width: 100px;
   height: 25px;
   /* box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px; */
