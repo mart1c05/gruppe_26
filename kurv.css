@@ -1,13 +1,12 @@
 .overskrift {
   display: grid;
   justify-items: center;
-  margin-top: 80px;
 }
 
 .overskrift h2 {
   font-family: var(--overskrift);
   font-size: var(--h2);
-  color: var(--grå);
+  color: green;
   margin-bottom: 30px;
 }
 
@@ -19,6 +18,12 @@
   margin-bottom: 50px;
   background-color: var(--gul);
   border-radius: 15px;
+}
+
+.products img {
+  border-radius: 15px;
+  width: 70%;
+  cursor: pointer;
 }
 
 .products {
@@ -38,34 +43,46 @@
   justify-items: left;
   justify-content: space-evenly;
 }
+
 .info p {
   font-family: var(--brødtekst);
   font-size: var(--h5);
 }
-.info h3 {
-  font-family: var(--brødtekst);
-  font-size: var(--h5);
+
+.vilkaar {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
-.products img {
-  border-radius: 15px;
-  width: 70%;
-  cursor: pointer;
+.label {
+  grid-column: 2/3;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+}
+
+.total h3 {
+  font-family: var(--brødtekst);
+  font-size: var(--h3);
+}
+
+.vilkaar p {
+  font-family: var(--brødtekst);
+  font-size: 1rem;
+}
+
+.vilkaar h5 {
+  font-family: var(--brødtekst);
+  font-size: var(--h5);
+  text-decoration: underline;
 }
 
 .total {
   display: grid;
   justify-items: right;
   margin-right: 120px;
-}
-
-.vilkaar {
-  display: grid;
-
-  grid-template-columns: 1fr 1fr 1fr;
-}
-label {
-  grid-column: 2/3;
 }
 
 @media (min-width: 600px) {
