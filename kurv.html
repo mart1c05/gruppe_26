@@ -60,10 +60,8 @@
         <div class="foto_icon">
           <img src="" alt="" />
         </div>
-        <div class="info">
-          <h3></h3>
-          <p></p>
-        </div>
+        <h3></h3>
+        <div class="info"><p></p></div>
       </article>
     </template>
 
@@ -115,7 +113,7 @@
         if (kurvIndhold == 0) {
           console.log("ingen varer tilføjet");
         } else {
-          document.querySelector(".tomkurv").classList.add("displaynone")
+          document.querySelector(".tomkurv").classList.add("displaynone");
           kurvIndhold.forEach((item) => {
             const klon = tøjTemplate.cloneNode(true).content;
             klon.querySelector("img").src = item.billede1;

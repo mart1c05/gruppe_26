@@ -20,23 +20,30 @@
   background-color: var(--gul);
   border-radius: 15px;
 }
+.products h3 {
+  text-align: center;
+}
 
 .products img {
   border-radius: 15px;
-  width: 70%;
+  width: 100%;
   cursor: pointer;
+  padding: 10px;
 }
 
 .products {
   display: grid;
-  border: 50px var(--gul) solid;
+  border: 2px var(--gul) solid;
   background-color: var(--gul);
   grid-template-columns: 1fr 2fr;
   border-radius: 15px;
+  color: white;
+  font-family: var(--brødtekst);
 }
 .products .info {
   background-color: var(--gul);
   color: white;
+  margin: auto;
 }
 
 .info {
@@ -47,7 +54,8 @@
 
 .info p {
   font-family: var(--brødtekst);
-  font-size: var(--h5);
+  font-size: var(--h3);
+  font-weight: bold;
 }
 
 .vilkaar {
@@ -98,11 +106,11 @@
   }
 }
 
-.displaynone{
+.displaynone {
   display: none;
 }
 
-.tomkurvDiv{
+.tomkurvDiv {
   display: grid;
   justify-content: center;
   padding: 2%;
