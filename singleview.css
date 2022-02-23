@@ -20,8 +20,7 @@ article {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   color: var(--grå);
   font-family: var(--brødtekst);
-      align-items: center;
-
+  align-items: center;
 }
 
 /** ---------- Produkt Billederne ---------- */
@@ -43,10 +42,15 @@ h2 {
   border: 2px solid var(--orange);
   border-radius: 15px;
 }
+.produktTekst .pris {
+  display: flex;
+  justify-content: end;
+  margin-right: 20px;
+}
 /** ---------- Produktsection (web format) ---------- */
 
 @media (min-width: 600px) {
-  .produktTekst{
+  .produktTekst {
     width: 75%;
   }
   .produktBilleder {
@@ -57,10 +61,9 @@ h2 {
   .produktBilleder h2 {
     margin-bottom: 20px;
   }
-  #levering div{
-  width: 75%;
-  
-}
+  #levering div {
+    width: 75%;
+  }
 }
 /** ---------- Kurv Knap ---------- */
 
@@ -88,8 +91,7 @@ h2 {
   justify-items: center;
 }
 
-#levering div{
-
+#levering div {
   margin-top: 5%;
 }
 
