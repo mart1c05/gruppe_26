@@ -113,7 +113,8 @@
 #levering {
   display: grid;
   justify-items: center;
-  padding: 60px;
+  justify-content: center;
+  padding: 20%;
 }
 
 .leveringsinfo {
@@ -128,13 +129,13 @@
 .leveringsinfo div {
   display: grid;
   justify-items: center;
+      padding-top: 6%;
 }
 
 .leveringsinfo h4 {
   font-size: var(--h4);
   font-family: var(--overskrift);
   color: rgb(43, 39, 39);
-  margin-top: 80px;
 }
 
 .leveringsinfo p {
@@ -146,9 +147,8 @@
 }
 @media (min-width: 600px) {
   #levering {
-    padding: 100px;
   }
   .leveringsinfo h4 {
-    margin-top: 130px;
+  
   }
 }
