@@ -29,7 +29,7 @@ function vis() {
   document.querySelector(".pris").textContent =
     produkt.pris1 + " kr. " + produkt.pris2 + " kr.";
     produkt.pris1 + " " + produkt.pris2;
-    document.querySelector(".buy").addEventListener("click", () => {
+    document.querySelector(".kurven").addEventListener("click", () => {
       location.href = `kurv.html?id=${produkt._id}`;
     });
 }
