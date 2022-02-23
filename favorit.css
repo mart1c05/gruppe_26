@@ -68,3 +68,8 @@ h2 {
 .displayNone {
   display: none;
 }
+
+.filterknappen{
+  display: grid;
+  justify-items: center;
+}
