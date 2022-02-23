@@ -36,7 +36,7 @@
   display: grid;
   border: 2px var(--gul) solid;
   background-color: var(--gul);
-  grid-template-columns: repeat(autofit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   border-radius: 15px;
   color: white;
   font-family: var(--brødtekst);
