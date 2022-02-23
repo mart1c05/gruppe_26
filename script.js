@@ -102,11 +102,14 @@ function vis(produkter) {
 
   const tomt = document.querySelectorAll(".tomt_heart");
   const fyldt = document.querySelectorAll(".full_heart");
+  let checkClass = JSON.parse(localStorage.getItem("hjertID"));
   
-  if (hjertID >= 0) {
-    hjertID = JSON.parse(localStorage.getItem("hjertID"));
-    console.log("hjerte is not NULL")
+  if (checkClass === null) {
+    console.log("hjerte is NULL");
+    localStorage.setItem("hjertID", JSON.stringify(hjertID));
   }
+  hjertID = JSON.parse(localStorage.getItem("hjertID"));
+
 
   // for hver fyldthjærte er der en EventListener.
   fyldt.forEach((e, i) => {
@@ -117,7 +120,9 @@ function vis(produkter) {
       // "i" er vores valgte hjærtes ID, den brugest til finde det tommehjærte i array'en "tomt" der matcher med den vi har klikket på
       // derefter toggler vi klassen displaynone, der for den til at forsvinde eller dukke frem.
       tomt[i].classList.toggle("displaynone");
-      hjertID.splice(i, 1);
+      let id = hjertID.indexOf(i)
+
+      hjertID.splice(id, 1);
       localStorage.setItem("hjertID", JSON.stringify(hjertID));
       console.log(hjertID)
     });
@@ -131,11 +136,12 @@ function vis(produkter) {
       fyldt[i].classList.toggle("displaynone");
       hjertID.push(i)
       localStorage.setItem("hjertID", JSON.stringify(hjertID));
+      console.log(hjertID);
     });
   });
 
 
-let checkClass = JSON.parse(localStorage.getItem("hjertID"));
+
 
 if (checkClass.length > 0) {
 
