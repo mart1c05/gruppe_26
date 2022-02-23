@@ -80,9 +80,19 @@ h1 {
 
 .displaynone {
   display: none;
+  
 }
+
+/** ---------- Filter Knap ---------- */
+
+.filterknap{
+  display: grid;
+  justify-items: center;
+}
+
 .unisexh1 {
   font-family: var(--overskrift);
   font-size: var(--h2);
   margin-left: 2%;
+  padding-top: 80px;
 }

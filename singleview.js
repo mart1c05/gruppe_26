@@ -24,7 +24,7 @@ function vis() {
   document.querySelector(".navn").textContent = produkt.navn;
   document.querySelector(".beskrivelse").textContent =  produkt.beskrivelse
     produkt.beskrivelse;
-  document.querySelector(".materiale").textContent =$
+  document.querySelector(".materiale").textContent =
     produkt.materiale;
   document.querySelector(".pris").textContent =
     produkt.pris1 + " kr. " + produkt.pris2 + " kr.";
