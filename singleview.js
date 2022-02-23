@@ -33,8 +33,11 @@ function vis() {
   produkt.beskrivelse;
   document.querySelector(".materiale").textContent = produkt.materiale;
   document.querySelector(".pris").textContent =
-    produkt.pris1 + " kr. " + produkt.pris2 + " kr.";
-  produkt.pris1 + " " + produkt.pris2;
+    produkt.pris1 + " DKK" ;
+    document.querySelector(".kurven").addEventListener("click", () => {
+      location.href = `kurv.html?id=${produkt._id}`;
+    });
+    
   // pager ID'et af produktet over på en ny siden (singleView), hvor vi henter alle infomationerne igen.
   document.querySelector(".kurven").addEventListener("click", () => {
     location.href = `kurv.html?id=${produkt._id}`;
