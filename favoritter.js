@@ -27,6 +27,7 @@ function filtrerTøj() {
 function printud(favoritter) {
   const data = document.querySelector(".data_products");
   const tøjTemplate = document.querySelector("template");
+  hjertID = JSON.parse(localStorage.getItem("hjertID"));
 
   data.textContent = "";
 
@@ -49,9 +50,11 @@ function printud(favoritter) {
         console.log(id);
         //fjerner alt imellem vores valgt id os så en index frem. Altså kun den valgte spand fjernes fra listen.
         favoritter.splice(id, 1);
+        hjertID.splice(id, 1);
         console.log(favoritter);
         //Tilføjer vores array favorit til sessionStorage
         localStorage.setItem("favoritter", JSON.stringify(favoritter));
+        localStorage.setItem("hjertID", JSON.stringify(hjertID));
         // reloader vores side for de viste produkter bliver opdateret.
         window.location.reload();
       });
@@ -67,7 +70,7 @@ function foldOut() {
 }
 
 function hearts() {
-  /* if/else statement til at vide om hjærterne er blivet valgt */
+  // if/else statement til at vide om der er tilføjet varer til favoritter, hvis ikke kommer der en besked frem.
   let checkFav = localStorage.getItem("favoritter", JSON.stringify(favoritter));
   console.log(checkFav + " Lister med checkFAv");
   if (checkFav === null) {
