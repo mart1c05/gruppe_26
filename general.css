@@ -224,8 +224,9 @@ address {
   border-radius: 15px;
   margin-top: 2%;
   margin-bottom: 2%;
-  margin-left: 2%;
-  font-family: var(--brødtekst);
+  /* margin-left: 2%; */
+  font-family: var(--uiElementer);
+    font-size: var(--uisize);
 }
 .foldout button {
   border: none;
@@ -234,7 +235,8 @@ address {
   width: 100px;
   height: 25px;
   /* box-shadow: rgba(0, 0, 0, 0.45) 0px 25px 20px -20px; */
-  font-family: var(--brødtekst);
+  font-family: var(--uiElementer);
+  font-size: var(--uisize);
   color: white;
 }
 
