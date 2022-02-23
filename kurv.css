@@ -25,17 +25,17 @@
 }
 
 .products img {
-  border-radius: 15px;
+  border-radius: 30px;
   width: 100%;
   cursor: pointer;
-  padding: 10px;
+  padding: 20px;
 }
 
 .products {
   display: grid;
   border: 2px var(--gul) solid;
   background-color: var(--gul);
-  grid-template-columns: 1fr 2fr;
+  grid-template-columns: repeat(autofit, minmax(300px, 1fr));
   border-radius: 15px;
   color: white;
   font-family: var(--brødtekst);
@@ -47,15 +47,19 @@
 }
 
 .info {
-  display: flex;
   justify-items: left;
   justify-content: space-evenly;
+}
+.info h3 {
+  font-family: var(--brødtekst);
+  font-size: var(--h3);
 }
 
 .info p {
   font-family: var(--brødtekst);
-  font-size: var(--h3);
+  font-size: var(--h5);
   font-weight: bold;
+  margin-top: 10px;
 }
 
 .vilkaar {
