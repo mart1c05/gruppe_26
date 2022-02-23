@@ -48,11 +48,12 @@
     </div>
   </header>
   <body>
-    
     <div class="overskrift">
       <h2>Din indkøbskurv</h2>
     </div>
-
+    <div class="tomkurvDiv">
+      <h2 class="tomkurv">Din kurv er tom</h2>
+    </div>
     <section class="data_products"></section>
     <template>
       <article class="products">
@@ -65,22 +66,22 @@
         </div>
       </article>
     </template>
-    
+
     <div class="total">
-      <h3>TOTAL:</h4>
+      <h3>TOTAL:</h3>
     </div>
 
     <div class="vilkaar">
       <label class="container">
-      <div class="checkbox">
-        <input type="checkbox" />
-        <p>Jeg har læst og accepterer jeres vilkår og handelsbetingelser</p>
-      </div>
-      <span class="checkmark"></span>
-      <br>
-      <p><i>Fragt og moms udregnes ved kassen</i></p>
-      <br>
-      <h5>TIL KASSEN</h5>
+        <div class="checkbox">
+          <input type="checkbox" />
+          <p>Jeg har læst og accepterer jeres vilkår og handelsbetingelser</p>
+        </div>
+        <span class="checkmark"></span>
+        <br />
+        <p><i>Fragt og moms udregnes ved kassen</i></p>
+        <br />
+        <h5>TIL KASSEN</h5>
       </label>
     </div>
 
@@ -111,14 +112,19 @@
         const tøjTemplate = document.querySelector("template");
         data.textContent = "";
 
-        kurvIndhold.forEach((item) => {
-          const klon = tøjTemplate.cloneNode(true).content;
-          klon.querySelector("img").src = item.billede1;
-          klon.querySelector("h3").textContent = item.navn;
-          klon.querySelector("p").textContent =
-            item.pris1 + "DKK" + " " + item.pris2 + "DKK";
-          data.appendChild(klon);
-        });
+        if (kurvIndhold == 0) {
+          console.log("ingen varer tilføjet");
+        } else {
+          document.querySelector(".tomkurv").classList.add("displaynone")
+          kurvIndhold.forEach((item) => {
+            const klon = tøjTemplate.cloneNode(true).content;
+            klon.querySelector("img").src = item.billede1;
+            klon.querySelector("h3").textContent = item.navn;
+            klon.querySelector("p").textContent =
+              item.pris1 + "DKK" + " " + item.pris2 + "DKK";
+            data.appendChild(klon);
+          });
+        }
       }
 
       hentData();
