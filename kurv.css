@@ -132,6 +132,7 @@ input {
   }
   .betal h5 {
     grid-column: 4/5;
+    margin-bottom: 200px;
   }
 }
 
