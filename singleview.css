@@ -20,6 +20,7 @@ article {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   color: var(--grå);
   font-family: var(--brødtekst);
+      align-items: center;
 }
 
 /** ---------- Produkt Billederne ---------- */
