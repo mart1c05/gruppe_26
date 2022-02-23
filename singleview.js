@@ -27,8 +27,7 @@ function vis() {
   document.querySelector(".materiale").textContent =
     produkt.materiale;
   document.querySelector(".pris").textContent =
-    produkt.pris1 + " kr. " + produkt.pris2 + " kr.";
-    produkt.pris1 + " " + produkt.pris2;
+    produkt.pris1 + " DKK" ;
     document.querySelector(".kurven").addEventListener("click", () => {
       location.href = `kurv.html?id=${produkt._id}`;
     });
