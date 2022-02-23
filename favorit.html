@@ -48,9 +48,13 @@
   </header>
   <body>
     <h2>Dine favoritter</h2>
+    <p class="tomListe">
+      <i>Din liste med Favoritter er tom. </i><br />
+      <i> Du kan tilføje vare ved at klikke på produktets hjertet.</i>
+    </p>
     <div class="filterknappen">
-    <button class="sorterKnap" onclick="foldOut()">vis filter menu</button>
- </div>
+      <button class="sorterKnap" onclick="foldOut()">vis filter menu</button>
+    </div>
     <nav class="foldout">
       <button data-kategori="alle" class="valgt">alle</button>
       <button data-kategori="T-shirt">T-shirts</button>
@@ -58,10 +62,6 @@
       <!--    <button data-Kategori="Kategori" class="valgt">Filtrer</button>
       <button data-Kategori="Kategori" class="valgt">Filtrer</button> -->
     </nav>
-    <h2 class="tomListe">
-      Din liste med Favoritter er tom, du kan tilføje vare ved at klikke på
-      produktets hjertet.
-    </h2>
     <section class="data_products"></section>
     <template>
       <article class="products">
