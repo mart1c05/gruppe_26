@@ -48,6 +48,7 @@ h2 {
   background-color: var(--grøn);
   font-family: var(--uiElementer);
   place-self: end;
+  justify-content: space-evenly;
 
   max-width: 130px;
 }
