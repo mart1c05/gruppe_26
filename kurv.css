@@ -1,6 +1,7 @@
 .overskrift {
   display: grid;
   justify-items: center;
+  padding: 80px;
 }
 
 .overskrift h2 {
@@ -66,17 +67,20 @@
 .total h3 {
   font-family: var(--brødtekst);
   font-size: var(--h3);
+  color: rgb(66, 66, 66);
 }
 
 .vilkaar p {
   font-family: var(--brødtekst);
   font-size: 1rem;
+  color: rgb(66, 66, 66);
 }
 
 .vilkaar h5 {
   font-family: var(--brødtekst);
   font-size: var(--h5);
   text-decoration: underline;
+  color: rgb(66, 66, 66);
 }
 
 .total {
