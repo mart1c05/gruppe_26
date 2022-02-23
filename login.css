@@ -2,16 +2,15 @@ h2 {
   font-family: var(--overskrift);
   font-size: var(--h2);
   text-align: center;
-  margin: 20px;
   color: green;
-  margin-top: 50px;
+  padding: 70px;
 }
 .login_info {
+  text-align: center;
   font-family: var(--brødtekst);
   font-size: var(--p);
   color: green;
   opacity: 50%;
-  margin: 30px;
   font-style: italic;
 }
 .login-felt {
