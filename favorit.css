@@ -53,3 +53,10 @@
     max-width: 80%;
   }
 }
+
+.spand{
+  cursor: pointer;
+}
+.displayNone{
+  display: none;
+}
