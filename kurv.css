@@ -1,3 +1,5 @@
+/** ---------- Overskrift på kurv side ---------- */
+
 .overskrift {
   display: grid;
   justify-items: center;
@@ -11,7 +13,7 @@
   margin-bottom: 30px;
 }
 
-/** ---------- Section Der Indholder Artikler ---------- */
+/** ---------- Section med artikler ---------- */
 .data_products {
   padding-top: 2%;
   margin-left: 50px;
@@ -57,6 +59,8 @@
   font-weight: bold;
   margin-top: 10px;
 }
+
+/** ---------- Betaling section ---------- */
 
 .betal {
   display: grid;
@@ -105,6 +109,7 @@ input {
   grid-column: 3/4;
   margin-top: 20px;
 }
+/** ---------- Betalings section (web format) ---------- */
 
 @media (min-width: 600px) {
   .data_products {
@@ -135,6 +140,7 @@ input {
     margin-bottom: 200px;
   }
 }
+/** ---------- Dette bliver vist hvis kurven er tom ---------- */
 
 .displaynone {
   display: none;

@@ -1,3 +1,5 @@
+/** ---------- Overskrift favorit side ---------- */
+
 h2 {
   font-family: var(--overskrift);
   font-size: var(--h2);
@@ -7,6 +9,8 @@ h2 {
   margin-top: 10px;
 }
 
+/** ---------- Dette bliver vist hvis favorit siden er tom ---------- */
+
 .tomListe {
   font-family: var(--brødtekst);
   font-size: var(--p);
@@ -14,6 +18,8 @@ h2 {
   text-align: center;
   margin-bottom: 30px;
 }
+
+/** ---------- Section der indeholder artikler ---------- */
 
 .data_products {
   display: grid;
@@ -59,6 +65,15 @@ h2 {
   font-family: var(--brødtekst);
   padding: 5px;
 }
+
+/** ---------- Section der indeholder artikler (web format) ---------- */
+@media (min-width: 600px) {
+  .products {
+    max-width: 80%;
+  }
+}
+
+/** ---------- Smid ud knap ---------- */
 .med_spand {
   display: flex;
 }
@@ -67,15 +82,10 @@ h2 {
   object-fit: contain;
   max-width: 12%;
 }
-@media (min-width: 600px) {
-  .products {
-    max-width: 80%;
-  }
-}
-
 .spand {
   cursor: pointer;
 }
+/** ---------- filtrerings knap---------- */
 .displayNone {
   display: none;
 }
