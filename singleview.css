@@ -7,7 +7,7 @@ main {
 button {
   margin: 2%;
   padding: 1% 2% 1% 2%;
-  background-color: var(--orange);
+  background-color: var(--grøn);
   border: none;
   border-radius: 15px;
   color: var(--hvid);
@@ -21,6 +21,8 @@ article {
   color: var(--grå);
   font-family: var(--brødtekst);
   align-items: center;
+  border-top: 2px solid var(--orange);
+  border-bottom: 2px solid var(--orange);
 }
 
 /** ---------- Produkt Billederne ---------- */
@@ -30,16 +32,22 @@ article {
 
 /** ---------- Produkt Tekst ---------- */
 
-h2 {
+h3 {
+  font-size: var(--h3);
   text-align: center;
+}
+
+.produktTekst h5 {
+  font-size: 1.5rem;
+  font-weight: bolder;
+  padding-bottom: 2%;
 }
 
 .produktTekst {
   padding: 5%;
   display: flex;
   flex-direction: column;
-  row-gap: 15px;
-  border: 2px solid var(--orange);
+  row-gap: 5px;
   border-radius: 15px;
 }
 .produktTekst .pris {
@@ -50,6 +58,18 @@ h2 {
 /** ---------- Produktsection (web format) ---------- */
 
 @media (min-width: 600px) {
+  article {
+    border-top: 2px solid var(--orange);
+  }
+
+  .produkt1 {
+    border-radius: 15px;
+  }
+  .produktTekst h5 {
+    font-size: 2rem;
+    font-weight: bolder;
+  }
+
   .produktTekst {
     width: 75%;
   }
@@ -64,7 +84,15 @@ h2 {
   #levering div {
     width: 75%;
   }
+
+  .leveringsinfo h3 {
+    font-family: var(--brødtekst);
+    font-size: var(--h4);
+    text-align: center;
+    padding: 10px;
+  }
 }
+
 /** ---------- Kurv Knap ---------- */
 
 .kurven {
@@ -82,7 +110,7 @@ h2 {
 }
 
 .kurven img {
-  max-width: 20%;
+  max-width: 40%;
 }
 
 /** ---------- levering section ---------- */
@@ -93,23 +121,24 @@ h2 {
 
 #levering div {
   margin-top: 5%;
+  padding-bottom: 4%;
 }
 
 .leveringsinfo {
   display: flex;
   flex-direction: column;
   row-gap: 15px;
-  border: 2px solid var(--orange);
   border-radius: 15px;
   color: var(--grå);
 }
 .leveringsinfo h3 {
   font-family: var(--brødtekst);
+  font-size: var(--h4);
   text-align: center;
-  border-bottom: 2px solid var(--orange);
   padding: 10px;
 }
 .leveringsinfo p {
   font-family: var(--brødtekst);
-  padding: 10px;
+  font-size: var(--p);
+  text-align: center;
 }

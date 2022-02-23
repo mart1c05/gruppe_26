@@ -5,7 +5,8 @@ h2 {
   font-size: var(--h2);
   text-align: center;
   color: green;
-  padding: 70px;
+  padding-top: 80px;
+  padding-bottom: 30px;
 }
 /** ---------- Login felt ---------- */
 .login_info {

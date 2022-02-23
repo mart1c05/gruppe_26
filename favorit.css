@@ -5,7 +5,8 @@ h2 {
   font-size: var(--h2);
   color: green;
   text-align: center;
-  padding: 70px;
+  padding-top: 80px;
+  padding-bottom: 20px;
   margin-top: 10px;
 }
 
