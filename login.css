@@ -14,7 +14,7 @@ h2 {
   font-style: italic;
 }
 .login-felt {
-  background-color: #fddc647a;
+  background-color: #fdbd5e7a;
   padding: 30px;
   margin: 20px;
   border-radius: 20px;
@@ -24,7 +24,7 @@ h2 {
 form {
   font-family: var(--uiElementer);
   font-size: var(--uisize);
-  color: var(--grå);
+  color: rgb(90, 88, 88);
   opacity: 80%;
 }
 .form-felt_1,
@@ -51,7 +51,7 @@ label {
 button {
   font-family: var(--uiElementer);
   font-size: var(--uisize);
-  background-color: #ffd32c;
+  background-color: orange;
   border: none;
   border-radius: 5px;
   padding: 10px;

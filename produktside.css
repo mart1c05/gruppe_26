@@ -39,7 +39,7 @@ h1 {
 .info h3 {
   font-family: var(--brødtekst);
 }
-.products img {
+.products .foto {
   border-radius: 15px;
   cursor: pointer;
 }
@@ -80,12 +80,11 @@ h1 {
 
 .displaynone {
   display: none;
-  
 }
 
 /** ---------- Filter Knap ---------- */
 
-.filterknap{
+.filterknap {
   display: grid;
   justify-items: center;
 }
