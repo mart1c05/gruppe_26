@@ -42,14 +42,6 @@
   padding-bottom: 2%;
 }
 
-#velkommen {
-  background-image: url(/iconer/logo_bomuld.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: 50%;
-  height: 55vh;
-}
-
 /* ---------- KOLLEKTION ---------- */
 
 #kollektion {
@@ -61,11 +53,32 @@
   margin-top: 50px;
   font-family: var(--overskrift);
   font-size: clamp(2rem, 6vw, 5rem);
-  /* color: var(--gul); */
   color: green;
   text-align: center;
 }
 
+.overskrift_1 {
+  font-family: var(--overskrift);
+  font-weight: lighter;
+  font-size: 2.6rem;
+  text-align: center;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr;
+  padding-top: 40%;
+  color: rgb(2, 119, 2);
+  background-image: url(iconer/cotton_flower-01.png);
+  background-repeat: repeat;
+  background-position: 50%;
+  height: 50vh;
+}
+
+.blomst {
+  background-image: url(iconer/cotton_flower-01.png);
+  background-repeat: repeat;
+  background-position: 50%;
+  height: 50vh;
+}
 /* ---------- T-SHIRT & JEANS ---------- */
 
 #tshirtogjeans {
@@ -102,6 +115,10 @@
     grid-template-columns: 1fr;
     padding-top: 8%;
     color: rgb(2, 119, 2);
+    background-image: url(iconer/cotton_flower-01.png);
+    background-repeat: repeat;
+    background-position: 50%;
+    height: 40vh;
   }
 
   .overskrift_2 {
@@ -114,16 +131,13 @@
     grid-template-columns: 1fr;
     color: rgb(3, 82, 3);
     padding-top: 5%;
-    padding-bottom: 2%;
   }
 
-  #velkommen {
-    background-image: url(iconer/logo_bomuld.svg);
-    background-size: repeat;
+  .blomst {
+    background-image: url(iconer/cotton_flower-01.png);
     background-repeat: repeat;
     background-position: 50%;
-    height: 80vh;
-    margin-top: 100px;
+    height: 50vh;
   }
 
   #tshirtogjeans {
