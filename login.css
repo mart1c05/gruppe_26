@@ -3,13 +3,13 @@ h2 {
   font-size: var(--h2);
   text-align: center;
   margin: 20px;
-  color: var(--grå);
+  color: green;
   margin-top: 50px;
 }
 .login_info {
   font-family: var(--brødtekst);
   font-size: var(--p);
-  color: var(--grå);
+  color: green;
   opacity: 50%;
   margin: 30px;
   font-style: italic;

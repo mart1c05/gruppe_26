@@ -7,7 +7,7 @@
 .overskrift h2 {
   font-family: var(--overskrift);
   font-size: var(--h2);
-  color: var(--grå);
+  color: green;
   margin-bottom: 30px;
 }
 
@@ -19,6 +19,12 @@
   margin-bottom: 50px;
   background-color: var(--gul);
   border-radius: 15px;
+}
+
+.products img {
+  border-radius: 15px;
+  width: 70%;
+  cursor: pointer;
 }
 
 .products {
@@ -38,34 +44,40 @@
   justify-items: left;
   justify-content: space-evenly;
 }
+
 .info p {
   font-family: var(--brødtekst);
   font-size: var(--h5);
 }
-.info h3 {
+
+.vilkaar {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.label {
+  grid-column: 2/3;
+}
+
+.total h3 {
+  font-family: var(--brødtekst);
+  font-size: var(--h3);
+}
+
+.vilkaar h5 {
   font-family: var(--brødtekst);
   font-size: var(--h5);
 }
 
-.products img {
-  border-radius: 15px;
-  width: 70%;
-  cursor: pointer;
+.vilkaar p {
+  font-family: var(--brødtekst);
+  font-size: 1rem;
 }
 
 .total {
   display: grid;
   justify-items: right;
   margin-right: 120px;
-}
-
-.vilkaar {
-  display: grid;
-
-  grid-template-columns: 1fr 1fr 1fr;
-}
-label {
-  grid-column: 2/3;
 }
 
 @media (min-width: 600px) {
