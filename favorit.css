@@ -11,8 +11,8 @@ h2 {
   grid-template-columns: repeat(auto-fit, minmax(300px, 400px));
   gap: 50px;
   padding-bottom: 2%;
-  margin: 8%;
-  /* justify-content: center; */
+  justify-content: center;
+  justify-items: center;
 }
 
 .products {
@@ -69,7 +69,7 @@ h2 {
   display: none;
 }
 
-.filterknappen{
+.filterknappen {
   display: grid;
   justify-items: center;
 }
