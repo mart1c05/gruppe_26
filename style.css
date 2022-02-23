@@ -14,6 +14,42 @@
   width: 50vh;
 }
 
+/* ---------- VELKOMMEN CAPTION ---------- */
+
+.overskrift_1 {
+  font-family: var(--overskrift);
+  font-weight: lighter;
+  font-size: 2rem;
+  text-align: center;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr;
+  padding-top: 10%;
+  padding-bottom: 2%;
+  color: rgb(2, 119, 2);
+}
+
+.overskrift_2 {
+  font-family: var(--brødtekst);
+  font-size: 1.5rem;
+  font-weight: 900;
+  text-align: center;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr;
+  color: rgb(3, 82, 3);
+  padding-top: 5%;
+  padding-bottom: 2%;
+}
+
+#velkommen {
+  background-image: url(/iconer/logo_bomuld.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50%;
+  height: 55vh;
+}
+
 /* ---------- KOLLEKTION ---------- */
 
 #kollektion {
@@ -56,6 +92,40 @@
 }
 
 @media (min-width: 600px) {
+  .overskrift_1 {
+    font-family: var(--overskrift);
+    font-weight: lighter;
+    font-size: 4rem;
+    text-align: center;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr;
+    padding-top: 8%;
+    color: rgb(2, 119, 2);
+  }
+
+  .overskrift_2 {
+    font-family: var(--brødtekst);
+    font-size: 2.8rem;
+    font-weight: 900;
+    text-align: center;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr;
+    color: rgb(3, 82, 3);
+    padding-top: 5%;
+    padding-bottom: 2%;
+  }
+
+  #velkommen {
+    background-image: url(/iconer/logo_bomuld.svg);
+    background-size: repeat;
+    background-repeat: repeat;
+    background-position: 50%;
+    height: 80vh;
+    margin-top: 100px;
+  }
+
   #tshirtogjeans {
     max-width: 60%;
     margin-left: auto;
