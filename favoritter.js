@@ -84,9 +84,6 @@ function hearts() {
   }
 }
 
-document.querySelector(".tilbage").addEventListener("click", () => {
-  history.back();
-});
 
 hearts();
 printud(favoritter);
