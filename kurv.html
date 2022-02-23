@@ -117,8 +117,7 @@
             const klon = tøjTemplate.cloneNode(true).content;
             klon.querySelector("img").src = item.billede1;
             klon.querySelector("h3").textContent = item.navn;
-            klon.querySelector("p").textContent =
-              item.pris1 + "DKK" + " " + item.pris2 + "DKK";
+            klon.querySelector("p").textContent = item.pris1 + "DKK";
             data.appendChild(klon);
           });
         }

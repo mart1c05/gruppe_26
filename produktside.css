@@ -1,8 +1,3 @@
-h1 {
-  text-align: center;
-  margin: 40px;
-  color: green;
-}
 
 /** ---------- Section Der Indholder Artikler ---------- */
 .data_products {
@@ -12,6 +7,7 @@ h1 {
   gap: 50px;
   padding-bottom: 2%;
   padding-bottom: 15%;
+  min-height: 25vh;
 }
 
 .products {
@@ -49,13 +45,15 @@ h1 {
   padding: 2%;
 }
 
+/** ---------- Section Der Indholder Artikler  (web format) ---------- */
+
 @media (min-width: 600px) {
   .products {
     max-width: 80%;
   }
 }
 
-/** ---------- Produkt Hjærte ---------- */
+/** ---------- Produkt Hjerte ---------- */
 
 .foto_icon {
   display: grid;
@@ -90,9 +88,15 @@ h1 {
   justify-items: center;
 }
 
+
+/** ---------- H1 OVERSKRIFT ---------- */
+
 .unisexh1 {
   font-family: var(--overskrift);
   font-size: var(--h2);
   margin-left: 2%;
   padding-top: 80px;
+   text-align: center;
+  color: green;
+  padding-bottom: 5%;
 }

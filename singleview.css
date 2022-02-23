@@ -20,6 +20,7 @@ article {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   color: var(--grå);
   font-family: var(--brødtekst);
+      align-items: center;
 }
 
 /** ---------- Produkt Billederne ---------- */
@@ -40,6 +41,18 @@ h2 {
   row-gap: 15px;
   border: 2px solid var(--orange);
   border-radius: 15px;
+}
+/** ---------- Produktsection (web format) ---------- */
+
+@media (min-width: 600px) {
+  .produktBilleder {
+    padding: 30px;
+    max-width: 60%;
+    margin: auto;
+  }
+  .produktBilleder h2 {
+    margin-bottom: 20px;
+  }
 }
 /** ---------- Kurv Knap ---------- */
 
@@ -82,14 +95,4 @@ h2 {
 .leveringsinfo p {
   font-family: var(--brødtekst);
   padding: 10px;
-}
-@media (min-width: 600px) {
-  .produktBilleder {
-    padding: 30px;
-    max-width: 60%;
-    margin: auto;
-  }
-  .produktBilleder h2 {
-    margin-bottom: 20px;
-  }
 }
