@@ -1,4 +1,4 @@
-/** ---------- VARIABLER ---------- */ 
+/** ---------- VARIABLER ---------- */
 
 const header = document.querySelector("header h2");
 const url = "https://bomuldsboern-26e2.restdb.io/rest/produkter";
@@ -14,9 +14,9 @@ let produkter;
 let filter = "alle";
 let favoritter = [];
 let kurv = [];
-let hjertID = []
+let hjertID = [];
 
-/** ---------- START OG FILTER FUNKTION ---------- */ 
+/** ---------- START OG FILTER FUNKTION ---------- */
 
 function start() {
   filterKnapper.forEach((knap) => knap.addEventListener("click", filtrerTøj));
@@ -31,7 +31,7 @@ function filtrerTøj() {
   /* header.textContent = this.textContent; */
 }
 
-/** ---------- HENTDATA FRA RESTDB ---------- */ 
+/** ---------- HENTDATA FRA RESTDB ---------- */
 
 async function hentData() {
   console.log("hentdata");
@@ -48,17 +48,14 @@ function vis(json) {
   console.log(json);
 }
 
-/** ---------- FREMKALD ALLE PRODUKTER ---------- */ 
+/** ---------- FREMKALD ALLE PRODUKTER ---------- */
 
 function vis(produkter) {
   const data = document.querySelector(".data_products");
   const tøjTemplate = document.querySelector("template");
   if (favoritter === null) {
     let favoritter = JSON.parse(localStorage.getItem("favoritter"));
-  } 
-
-
-  
+  }
 
   data.textContent = "";
 
@@ -69,8 +66,7 @@ function vis(produkter) {
       klon.querySelector("h3").textContent = item.navn;
       klon.querySelector("img").src = item.billede1;
 
-      klon.querySelector("p").textContent =
-        item.pris1 + "kr. " + item.pris2 + "kr.";
+      klon.querySelector("p").textContent = item.pris2 + "kr.";
 
       //eventlistenerder peger hen på en ny side. det tager id'et med som vi så kan hante i det nye script
 
@@ -94,22 +90,17 @@ function vis(produkter) {
     }
   });
 
-
-
-
-
-/** ---------- FAVORIT HJERTER - TOGGLE KLASSE ---------- */
+  /** ---------- FAVORIT HJERTER - TOGGLE KLASSE ---------- */
 
   const tomt = document.querySelectorAll(".tomt_heart");
   const fyldt = document.querySelectorAll(".full_heart");
   let checkClass = JSON.parse(localStorage.getItem("hjertID"));
-  
+
   if (checkClass === null) {
     console.log("hjerte is NULL");
     localStorage.setItem("hjertID", JSON.stringify(hjertID));
   }
   hjertID = JSON.parse(localStorage.getItem("hjertID"));
-
 
   // for hver fyldthjærte er der en EventListener.
   fyldt.forEach((e, i) => {
@@ -120,11 +111,11 @@ function vis(produkter) {
       // "i" er vores valgte hjærtes ID, den brugest til finde det tommehjærte i array'en "tomt" der matcher med den vi har klikket på
       // derefter toggler vi klassen displaynone, der for den til at forsvinde eller dukke frem.
       tomt[i].classList.toggle("displaynone");
-      let id = hjertID.indexOf(i)
+      let id = hjertID.indexOf(i);
 
       hjertID.splice(id, 1);
       localStorage.setItem("hjertID", JSON.stringify(hjertID));
-      console.log(hjertID)
+      console.log(hjertID);
     });
   });
 
@@ -134,62 +125,31 @@ function vis(produkter) {
       console.log("tomthjærte");
       e.classList.toggle("displaynone");
       fyldt[i].classList.toggle("displaynone");
-      hjertID.push(i)
+      hjertID.push(i);
       localStorage.setItem("hjertID", JSON.stringify(hjertID));
       console.log(hjertID);
     });
   });
 
+  if (checkClass.length > 0) {
+    console.log(checkClass + "butthole");
+    let addclass = Array.from(checkClass);
+    console.log(addclass);
 
-
-
-if (checkClass.length > 0) {
-
-  console.log(checkClass + "butthole")
-  let addclass = Array.from(checkClass)
-  console.log(addclass)
-
-  addclass.forEach((e) => {
-    fyldt[e].classList.toggle("displaynone")
-    tomt[e].classList.toggle("displaynone")
-  })
+    addclass.forEach((e) => {
+      fyldt[e].classList.toggle("displaynone");
+      tomt[e].classList.toggle("displaynone");
+    });
+  }
 }
 
-}
-
-
-
-/** ---------- FILTERMENU KNAP ---------- */ 
+/** ---------- FILTERMENU KNAP ---------- */
 
 // toggler klassen none på knappen filter
 function foldOut(produkter) {
   console.log("hi");
   foldbnt.classList.toggle("none");
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* function hearts() {
   // if/else statement til at vide om hjærterne er blivet valgt
