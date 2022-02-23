@@ -123,7 +123,7 @@ function vis(produkter) {
       // derefter toggler vi klassen displaynone, der for den til at forsvinde eller dukke frem.
       tomt[i].classList.toggle("displaynone");
       let id = hjertID.indexOf(i);
-
+      
       hjertID.splice(id, 1);
       localStorage.setItem("hjertID", JSON.stringify(hjertID));
       console.log(hjertID);
