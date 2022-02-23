@@ -1,6 +1,7 @@
 /** ---------- VARIABLER ---------- */
 
 const header = document.querySelector("header h2");
+// url og option er  vores login informationer til restdb(database med produkter)
 const url = "https://bomuldsboern-26e2.restdb.io/rest/produkter";
 const options = {
   headers: { "x-apikey": "620f5c4634fd62156585879d" },
@@ -9,20 +10,23 @@ const options = {
 const foldbnt = document.querySelector(".foldout");
 const filterKnapper = document.querySelectorAll("nav button");
 
-document.addEventListener("DOMContentLoaded", start);
 let produkter;
 let filter = "alle";
 let favoritter = [];
 let kurv = [];
 let hjertID = [];
-
+// når siden loads starter "start" funktionen.
+document.addEventListener("DOMContentLoaded", start);
 /** ---------- START OG FILTER FUNKTION ---------- */
 
 function start() {
+  // For hvert knap starter vi en funktion, når den klikkes.
   filterKnapper.forEach((knap) => knap.addEventListener("click", filtrerTøj));
   //loadJSON();
+  hentData();
 }
 function filtrerTøj() {
+  //sætter filter = det der står på knappen som der blev trykket på.
   filter = this.dataset.kategori;
   document.querySelector(".valgt").classList.remove("valgt");
   this.classList.add("valgt");
@@ -33,34 +37,35 @@ function filtrerTøj() {
 
 /** ---------- HENTDATA FRA RESTDB ---------- */
 
+// henter vores Produkter fra restDB (database med produkter)
 async function hentData() {
   console.log("hentdata");
   const resultat = await fetch(url, options);
-
+  // sætter arrayen med produkter til variablen "produkter"
   produkter = await resultat.json();
   console.log("Produkter", produkter);
+  // starter funktionen vis()
   vis(produkter);
   /* hearts(produkter) */
 }
-hentData();
 
-function vis(json) {
-  console.log(json);
-}
+
 
 /** ---------- FREMKALD ALLE PRODUKTER ---------- */
 
 function vis(produkter) {
   const data = document.querySelector(".data_products");
   const tøjTemplate = document.querySelector("template");
+  // Usikker på om denne if/else statement gør noget men tør ikke fjerne den.
   if (favoritter === null) {
     let favoritter = JSON.parse(localStorage.getItem("favoritter"));
   }
-
+  // Tømmer Alt Indhold inde i data
   data.textContent = "";
 
   produkter.forEach((item) => {
     console.log("Kategori", item.kategori);
+    // tager fat i vores template og siger at vi gerne vil klone den.
     if (filter == item.kategori || filter == "alle") {
       const klon = tøjTemplate.cloneNode(true).content;
       klon.querySelector("h3").textContent = item.navn;
@@ -68,11 +73,12 @@ function vis(produkter) {
 
       klon.querySelector("p").textContent = item.pris2 + "kr.";
 
-      //eventlistenerder peger hen på en ny side. det tager id'et med som vi så kan hante i det nye script
-
+      // pager ID'et af produktet over på en ny siden (singleView), hvor vi henter alle infomationerne igen.
       klon.querySelector("img").addEventListener("click", () => {
         location.href = `singleview.html?id=${item._id}`;
       });
+
+      // EventListener på hjertet, den stater en annonym ("arrow function") funktion
       klon.querySelector(".tomt_heart").addEventListener("click", () => {
         console.log("works");
         //pusher til et nyt array.
@@ -86,6 +92,7 @@ function vis(produkter) {
         // tilføjer favoritter til sessionStorage, så vi kan hente det på en nyside.
         localStorage.setItem("favoritter", JSON.stringify(favoritter));
       });
+      // tilføjer indholdet for hvert produkt til vores tomme section.
       data.appendChild(klon);
     }
   });
@@ -94,12 +101,16 @@ function vis(produkter) {
 
   const tomt = document.querySelectorAll(".tomt_heart");
   const fyldt = document.querySelectorAll(".full_heart");
+
+  // Henter vores array fra localStorage og giver en anden variable, som vi bruger senere.
   let checkClass = JSON.parse(localStorage.getItem("hjertID"));
 
+  // hvis vores arrayen ikke findes i localStorage, tilføjes den.
   if (checkClass === null) {
     console.log("hjerte is NULL");
     localStorage.setItem("hjertID", JSON.stringify(hjertID));
   }
+  // henter vores array fra local storage til vores originale variable.
   hjertID = JSON.parse(localStorage.getItem("hjertID"));
 
   // for hver fyldthjærte er der en EventListener.
@@ -112,7 +123,7 @@ function vis(produkter) {
       // derefter toggler vi klassen displaynone, der for den til at forsvinde eller dukke frem.
       tomt[i].classList.toggle("displaynone");
       let id = hjertID.indexOf(i);
-
+      
       hjertID.splice(id, 1);
       localStorage.setItem("hjertID", JSON.stringify(hjertID));
       console.log(hjertID);
@@ -131,11 +142,14 @@ function vis(produkter) {
     });
   });
 
+  // Tjekker om nogle af hjerterne er blivet klikket, ved at kigge i arrayen i localStorage. 
+  //Hvis der er tilføjes en "display: none" klasse på de tomme hjerter, så de fyldte kommer til syne.
   if (checkClass.length > 0) {
     console.log(checkClass + "butthole");
+    // er vores objekter om til en array en objekter.
     let addclass = Array.from(checkClass);
     console.log(addclass);
-
+    // Løber hvert produkt igen for der er blevet klikket på hjertet.
     addclass.forEach((e) => {
       fyldt[e].classList.toggle("displaynone");
       tomt[e].classList.toggle("displaynone");
@@ -151,20 +165,3 @@ function foldOut(produkter) {
   foldbnt.classList.toggle("none");
 }
 
-/* function hearts() {
-  // if/else statement til at vide om hjærterne er blivet valgt
-  let checkFav = localStorage.getItem("favoritter", JSON.stringify(favoritter));
-  console.log(checkFav + " checkfav liste");
-  if (checkFav === null) {
-    console.log("there is nothing in here");
-    console.log(checkFav + " checkfav liste");
-  } else {
-    console.log("Stuff has been picked" + checkFav);
-
-    var intersection = checkFav.filter(function (e) {
-      return produkter.indexOf(e) > -1;
-    });
-
-    console.log(intersection)
-  }
-} */
