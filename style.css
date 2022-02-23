@@ -1,5 +1,5 @@
 #splashimage {
-  background-image: url(/billeder/splash_billede.svg);
+  background-image: url(billeder/splash_billede.svg);
   background-size: cover;
   background-position: 50%;
   height: 80vh;
@@ -118,7 +118,7 @@
   }
 
   #velkommen {
-    background-image: url(/iconer/logo_bomuld.svg);
+    background-image: url(iconer/logo_bomuld.svg);
     background-size: repeat;
     background-repeat: repeat;
     background-position: 50%;
