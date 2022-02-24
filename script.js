@@ -1,4 +1,4 @@
-/** ---------- VARIABLER ---------- */
+/*//* ---------- VARIABLER ---------- */
 
 const header = document.querySelector("header h2");
 // url og option er  vores login informationer til restdb(database med produkter)
@@ -17,7 +17,7 @@ let kurv = [];
 let hjertID = [];
 // når siden loads starter "start" funktionen.
 document.addEventListener("DOMContentLoaded", start);
-/** ---------- START OG FILTER FUNKTION ---------- */
+/*//* ---------- START OG FILTER FUNKTION ---------- */
 
 function start() {
   // For hvert knap starter vi en funktion, når den klikkes.
@@ -35,7 +35,7 @@ function filtrerTøj() {
   /* header.textContent = this.textContent; */
 }
 
-/** ---------- HENTDATA FRA RESTDB ---------- */
+/*//*  ---------- HENTDATA FRA RESTDB ---------- */
 
 // henter vores Produkter fra restDB (database med produkter)
 async function hentData() {
@@ -49,8 +49,9 @@ async function hentData() {
   /* hearts(produkter) */
 }
 
-/** ---------- FREMKALD ALLE PRODUKTER ---------- */
-
+/*//* ---------- FREMKALD ALLE PRODUKTER ---------- */
+/*//& I denne funktion fremkalder vi alle vores produkter, det er også her at vi manipulere
+//& vores Favorit array og sirker os at hjerterne på siden forbliver valgt når vi reloader siden */
 function vis(produkter) {
   const data = document.querySelector(".data_products");
   const tøjTemplate = document.querySelector("template");
@@ -71,6 +72,7 @@ function vis(produkter) {
     console.log("Kategori", item.kategori);
     // tager fat i vores template og siger at vi gerne vil klone den.
     if (filter == item.kategori || filter == "alle") {
+      // Pager på vores template i html og siger at vi gerne vil lave en kopi.
       const klon = tøjTemplate.cloneNode(true).content;
       klon.querySelector("h3").textContent = item.navn;
       klon.querySelector("img").src = item.billede1;
@@ -91,22 +93,13 @@ function vis(produkter) {
         localStorage.setItem("favoritter", JSON.stringify(favoritter));
         console.log(favoritter);
       });
-      klon.querySelector(".full_heart").addEventListener("click", () => {
-        /* favoritter = JSON.parse(localStorage.getItem("favoritter"));
-        let id2 = favoritter.indexOf(item); */
-        
-        //fjerner objektet fra arrayet.
-        /* favoritter.splice(item, 1);
-        console.log(favoritter) */
-        // tilføjer favoritter til sessionStorage, så vi kan hente det på en nyside.
-        /* localStorage.setItem("favoritter", JSON.stringify(favoritter)); */
-      });
+
       // tilføjer indholdet for hvert produkt til vores tomme section.
       data.appendChild(klon);
     }
   });
 
-  /** ---------- FAVORIT HJERTER - TOGGLE KLASSE ---------- */
+  /*//* ---------- FAVORIT HJERTER - TOGGLE KLASSE ---------- */
 
   const tomt = document.querySelectorAll(".tomt_heart");
   const fyldt = document.querySelectorAll(".full_heart");
@@ -127,7 +120,9 @@ function vis(produkter) {
       // "i" er vores valgte hjærtes ID, den brugest til finde det tommehjærte i array'en "tomt" der matcher med den vi har klikket på
       // derefter toggler vi klassen displaynone, der for den til at forsvinde eller dukke frem.
       tomt[i].classList.toggle("displaynone");
+      // finder det ID der matcher den i hjertID Array'en
       let id = hjertID.indexOf(i);
+      // Fjerner de objekter der matcher med variablen id.
       hjertID.splice(id, 1);
       favoritter.splice(id, 1);
       localStorage.setItem("hjertID", JSON.stringify(hjertID));
@@ -149,6 +144,8 @@ function vis(produkter) {
     });
   });
 
+  //
+
   if (checkClass.length > 0) {
     console.log(checkClass + "butthole");
     let addclass = Array.from(checkClass);
@@ -161,7 +158,7 @@ function vis(produkter) {
   }
 }
 
-/** ---------- FILTERMENU KNAP ---------- */
+/*//* ---------- FILTERMENU KNAP ---------- */
 
 // toggler klassen none på knappen filter
 function foldOut(produkter) {
