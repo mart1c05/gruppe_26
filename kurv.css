@@ -3,7 +3,8 @@
 .overskrift {
   display: grid;
   justify-items: center;
-  padding: 80px;
+  padding-top: 80px;
+  padding-bottom: 10px;
 }
 
 .overskrift h2 {
