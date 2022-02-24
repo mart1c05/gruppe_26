@@ -122,7 +122,7 @@ function vis(produkter) {
       tomt[i].classList.toggle("displaynone");
       // finder det ID der matcher den i hjertID Array'en
       let id = hjertID.indexOf(i);
-      // Fjerner de objekter der matcher med variablen id.
+      // Fjerner de objekter der matcher med variablens ID.
       hjertID.splice(id, 1);
       favoritter.splice(id, 1);
       localStorage.setItem("hjertID", JSON.stringify(hjertID));
@@ -132,7 +132,7 @@ function vis(produkter) {
     });
   });
 
-  // denne "arrow function" gør der samme sam den ovenfor, men omvendt.
+  // denne "arrow function" gør der samme som den ovenfor, men omvendt(Tilføjer).
   tomt.forEach((e, i) => {
     e.addEventListener("click", () => {
       console.log("tomthjærte");
@@ -144,7 +144,7 @@ function vis(produkter) {
     });
   });
 
-  //
+  // Tjekket om det er hjerter der er blevet klikket. Hvis der er sætter der de rigtige klasser på de produkter.
 
   if (checkClass.length > 0) {
     console.log(checkClass + "butthole");

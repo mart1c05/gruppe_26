@@ -15,6 +15,7 @@
     <title>Bomulds Børns</title>
   </head>
   <body>
+      <!-- Header! Er den samme på alle sider, hvis den ændres skal den opdateres på dem alle. -->
     <header>
       <div class="logooverskift">
         <a href="index.html"
@@ -47,19 +48,22 @@
         /></a>
       </div>
     </header>
-
+    <!-- Sidens overskift  -->
     <h1 class="unisexh1">Unisex Børnetøj</h1>
+
+    <!-- Filter knap der kalder en funktion, som viser vores knapper -->
     <div class="filterknap">
       <button class="sorterKnap" onclick="foldOut()">Sorter</button>
     </div>
+    <!-- Navigation med alle vores knapper -->
     <nav class="foldout">
       <button data-kategori="alle" class="valgt">alle</button>
       <button data-kategori="T-shirt">T-shirts</button>
       <button data-kategori="jeans">Jeans</button>
-      <!--    <button data-Kategori="Kategori" class="valgt">Filtrer</button>
-      <button data-Kategori="Kategori" class="valgt">Filtrer</button> -->
     </nav>
+    <!-- Section hvor alle vores produkter blive sat ind -->
     <section class="data_products"></section>
+    <!-- Template for hvordan strukturen for vært produkt bliver opbygget -->
     <template>
       <article class="products">
         <div class="foto_icon">
@@ -77,6 +81,7 @@
         </div>
       </article>
     </template>
+    <!-- Footer! Er den samme på alle sider, hvis den ændres skal den opdateres på dem alle. -->
     <footer>
       <div class="footerDiv1">
         <div>
@@ -113,6 +118,7 @@
         </div>
       </div>
     </footer>
+    <!-- Henter vores Javascript -->
     <script src="script.js"></script>
   </body>
 </html>
