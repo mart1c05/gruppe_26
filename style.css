@@ -108,12 +108,12 @@
   .overskrift_1 {
     font-family: var(--overskrift);
     font-weight: lighter;
-    font-size: 4rem;
+    font-size: 3.2rem;
     text-align: center;
     display: grid;
     justify-items: center;
     grid-template-columns: 1fr;
-    padding-top: 8%;
+    padding-top: 38%;
     color: rgb(2, 119, 2);
     background-image: url(iconer/cotton_flower-01.png);
     background-repeat: repeat;
@@ -123,7 +123,7 @@
 
   .overskrift_2 {
     font-family: var(--brødtekst);
-    font-size: 2.8rem;
+    font-size: 2.2rem;
     font-weight: 900;
     text-align: center;
     display: grid;
@@ -169,7 +169,6 @@
   /*   background-color: var(--pink); */
   background-color: var(--orange);
   padding: 40px;
-
 }
 
 .vores_mål,
