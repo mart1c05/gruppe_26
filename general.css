@@ -242,7 +242,7 @@ address {
 .sorterKnap {
   width: 150px;
   height: 50px;
-  background-color: var(--pink);
+  background-color: var(--gul);
   color: var(--hvid);
   border: none;
   border-radius: 15px;
