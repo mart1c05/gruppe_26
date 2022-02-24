@@ -92,13 +92,14 @@ function vis(produkter) {
         console.log(favoritter);
       });
       klon.querySelector(".full_heart").addEventListener("click", () => {
-        //fjerner fra array et.
-        let id2 = produkter.indexOf(item);
-
-        favoritter.splice(id2, 1);
-        console.log(id2)
+        /* favoritter = JSON.parse(localStorage.getItem("favoritter"));
+        let id2 = favoritter.indexOf(item); */
+        
+        //fjerner objektet fra arrayet.
+        /* favoritter.splice(item, 1);
+        console.log(favoritter) */
         // tilføjer favoritter til sessionStorage, så vi kan hente det på en nyside.
-        localStorage.setItem("favoritter", JSON.stringify(favoritter));
+        /* localStorage.setItem("favoritter", JSON.stringify(favoritter)); */
       });
       // tilføjer indholdet for hvert produkt til vores tomme section.
       data.appendChild(klon);
@@ -128,8 +129,11 @@ function vis(produkter) {
       tomt[i].classList.toggle("displaynone");
       let id = hjertID.indexOf(i);
       hjertID.splice(id, 1);
+      favoritter.splice(id, 1);
       localStorage.setItem("hjertID", JSON.stringify(hjertID));
+      localStorage.setItem("favoritter", JSON.stringify(favoritter));
       console.log(hjertID);
+      console.log(favoritter);
     });
   });
 
