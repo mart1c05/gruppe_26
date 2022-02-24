@@ -19,7 +19,7 @@
 .overskrift_1 {
   font-family: var(--overskrift);
   font-weight: lighter;
-  font-size: 2rem;
+  font-size: 2.2rem;
   text-align: center;
   display: grid;
   justify-items: center;
@@ -60,12 +60,12 @@
 .overskrift_1 {
   font-family: var(--overskrift);
   font-weight: lighter;
-  font-size: 2.6rem;
+  font-size: 2rem;
   text-align: center;
   display: grid;
   justify-items: center;
   grid-template-columns: 1fr;
-  padding-top: 40%;
+  padding-top: 35%;
   color: rgb(2, 119, 2);
   background-image: url(iconer/cotton_flower-01.png);
   background-repeat: repeat;
